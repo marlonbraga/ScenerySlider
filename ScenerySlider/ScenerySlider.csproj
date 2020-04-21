@@ -128,17 +128,19 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Models\AudioSpot.cs" />
-    <Compile Include="Button.cs" />
+    <Compile Include="Models\Button.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\ImageSpot.cs" />
-    <Compile Include="InformationSpotButton.cs" />
+    <Compile Include="Models\Context\InformationSpotButton.cs" />
     <Compile Include="Models\InformationSpot.cs" />
+    <Compile Include="Models\Context\Project.cs" />
+    <Compile Include="Models\Context\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Models\Scene.cs" />
-    <Compile Include="SceneChangeButton.cs" />
+    <Compile Include="Models\Context\Scene.cs" />
+    <Compile Include="Models\Context\SceneChangeButton.cs" />
     <Compile Include="Models\TextSpot.cs" />
     <Compile Include="Models\VideoSpot.cs" />
   </ItemGroup>
