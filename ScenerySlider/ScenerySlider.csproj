@@ -128,11 +128,11 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Models\AudioSpot.cs" />
-    <Compile Include="Models\Button.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\IButton.cs" />
     <Compile Include="Models\ImageSpot.cs" />
     <Compile Include="Models\Context\InformationSpotButton.cs" />
     <Compile Include="Models\InformationSpot.cs" />
