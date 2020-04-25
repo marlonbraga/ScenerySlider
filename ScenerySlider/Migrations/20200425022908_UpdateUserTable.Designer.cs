@@ -2,15 +2,17 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using ScenerySlider.Data;
 
 namespace ScenerySlider.Migrations
 {
     [DbContext(typeof(DatabaseContext))]
-    partial class DatabaseContextModelSnapshot : ModelSnapshot
+    [Migration("20200425022908_UpdateUserTable")]
+    partial class UpdateUserTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -46,18 +48,12 @@ namespace ScenerySlider.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("InformationSpotId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("PositionX")
-                        .HasColumnType("int");
-
-                    b.Property<int>("PositionY")
+                    b.Property<int>("InformationId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("InformationSpotId");
+                    b.HasIndex("InformationId");
 
                     b.ToTable("InformationSpotButtons");
                 });
@@ -111,18 +107,12 @@ namespace ScenerySlider.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("PositionX")
-                        .HasColumnType("int");
-
-                    b.Property<int>("PositionY")
-                        .HasColumnType("int");
-
-                    b.Property<int>("SceneId")
+                    b.Property<int>("SceneDestinationId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("SceneId");
+                    b.HasIndex("SceneDestinationId");
 
                     b.ToTable("SceneChangeButtons");
                 });
@@ -150,9 +140,9 @@ namespace ScenerySlider.Migrations
 
             modelBuilder.Entity("ScenerySlider.Models.InformationSpotButton", b =>
                 {
-                    b.HasOne("ScenerySlider.Models.InformationSpot", "InformationSpot")
+                    b.HasOne("ScenerySlider.Models.InformationSpot", "Information")
                         .WithMany()
-                        .HasForeignKey("InformationSpotId")
+                        .HasForeignKey("InformationId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
@@ -168,7 +158,7 @@ namespace ScenerySlider.Migrations
 
             modelBuilder.Entity("ScenerySlider.Models.Scene", b =>
                 {
-                    b.HasOne("ScenerySlider.Models.InformationSpotButton", "InformationSpotButton")
+                    b.HasOne("ScenerySlider.Models.InformationSpotButton", "InformationButton")
                         .WithMany()
                         .HasForeignKey("InformationSpotButtonId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -183,9 +173,9 @@ namespace ScenerySlider.Migrations
 
             modelBuilder.Entity("ScenerySlider.Models.SceneChangeButton", b =>
                 {
-                    b.HasOne("ScenerySlider.Models.Scene", "Scene")
+                    b.HasOne("ScenerySlider.Models.Scene", "SceneDestination")
                         .WithMany()
-                        .HasForeignKey("SceneId")
+                        .HasForeignKey("SceneDestinationId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });

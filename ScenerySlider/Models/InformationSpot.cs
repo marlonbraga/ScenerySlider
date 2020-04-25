@@ -1,4 +1,4 @@
-﻿using ScenerySlider.Models.Context;
+﻿using ScenerySlider.Data;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -13,7 +13,7 @@ namespace ScenerySlider.Models {
 		public string FileLocate { get; set; }
 		public string Description { get; set; }
 		public void Save() {
-			var context = new InformationSpotContext();
+			var context = new DatabaseContext();
 			context.InformationSpots.Add(this);
 			context.SaveChanges();
 		}

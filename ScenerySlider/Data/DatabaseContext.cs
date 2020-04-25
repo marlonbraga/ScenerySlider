@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
-
-namespace ScenerySlider.Models.Context {
-	public class DatabaseContext : DbContext{
+using ScenerySlider.Models;
+namespace ScenerySlider.Data {
+	public class DatabaseContext: DbContext{
 		public DbSet<User> Users { get; set; }
 		public DbSet<Project> Projects { get; set; }
 		public DbSet<Scene> Scenes { get; set; }

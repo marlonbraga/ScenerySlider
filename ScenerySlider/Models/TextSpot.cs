@@ -1,11 +1,8 @@
 ﻿using System;
-using System.Web;
-using System.Web.Services;
-using System.Web.Services.Protocols;
-using System.ComponentModel;
+using System.ComponentModel.DataAnnotations.Schema;
 using ScenerySlider.Models;
-
 namespace ScenerySlider {
+    [NotMapped]
     public class TextSpot:InformationSpot {
         protected override void Close() {
             throw new NotImplementedException();

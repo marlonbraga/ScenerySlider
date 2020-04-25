@@ -5,7 +5,7 @@ using System.Web;
 
 namespace ScenerySlider.Models {
 	public abstract class Button {
-		protected float positionX;
-		protected float positionY;
+		public virtual int PositionX{ get; set; }
+		public virtual int PositionY { get; set; }
 	}
 }

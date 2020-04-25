@@ -1,13 +1,6 @@
-﻿using ScenerySlider.Models.Context;
-using System;
-using System.Collections.Generic;
+﻿using ScenerySlider.Data;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Data;
-using System.Data.Entity;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
 
 namespace ScenerySlider.Models {
 	public class Project {
@@ -16,9 +9,10 @@ namespace ScenerySlider.Models {
 		[ForeignKey("User")]
 		public int UserId { get; set; }
 		public virtual User User { get; set; }
+		public string Name { get; set; }
 		
 		public void Save() {
-			var context = new ProjectContext();
+			var context = new DatabaseContext();
 			context.Projects.Add(this);
 			context.SaveChanges();
 		}

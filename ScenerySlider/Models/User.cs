@@ -1,4 +1,4 @@
-﻿using ScenerySlider.Models.Context;
+﻿using ScenerySlider.Data;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -15,9 +15,10 @@ namespace ScenerySlider.Models {
 		public int Id { get; set; }
 		public string Login { get; set; }
 		public string Password { get; set; }
-		
+		public string Name { get; set; }
+
 		public void Save() {
-			var context = new UserContext();
+			var context = new DatabaseContext();
 			context.Users.Add(this);
 			context.SaveChanges();
 		}
