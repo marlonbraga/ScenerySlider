@@ -1,12 +1,11 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Web;
-using System.Web.Services;
-using System.Web.Services.Protocols;
-using System.ComponentModel;
 
-namespace ScenerySlider {
-    public class Button {
-        private int positionX;
-        private int positionY;
-    }
+namespace ScenerySlider.Models {
+	public abstract class Button {
+		public virtual int PositionX{ get; set; }
+		public virtual int PositionY { get; set; }
+	}
 }
