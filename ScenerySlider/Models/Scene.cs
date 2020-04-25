@@ -15,9 +15,9 @@ namespace ScenerySlider.Models {
         [ForeignKey("Project")]
         public int ProjectId { get; set; }
         public virtual Project Project { get; set; }
-        [ForeignKey("SceneChangeButton")]
-        public int SceneChangeButtonId { get; set; }
-        public virtual SceneChangeButton SceneButton { get; set; }
+        //[ForeignKey("SceneChangeButton")]
+        //public int SceneChangeButtonId { get; set; }
+        //public virtual SceneChangeButton SceneButton { get; set; }
         [ForeignKey("InformationSpotButton")]
         public int InformationSpotButtonId { get; set; }
         public virtual InformationSpotButton InformationButton { get; set; }

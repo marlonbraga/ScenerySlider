@@ -13,7 +13,7 @@ namespace ScenerySlider.Models {
     public class InformationSpotButton: Button {
         
         [Key()]
-        private int Id { get; set; }
+        public int Id { get; set; }
         [ForeignKey("InformationSpot")]
         public int InformationId { get; set; }
         public virtual InformationSpot Information { get; set; }

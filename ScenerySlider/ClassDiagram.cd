@@ -28,13 +28,6 @@
       <FileName>Global.asax.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="ScenerySlider.AudioSpot">
-    <Position X="8.25" Y="7" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAACAAAA=</HashCode>
-      <FileName>Models\AudioSpot.cs</FileName>
-    </TypeIdentifier>
-  </Class>
   <Class Name="ScenerySlider.ImageSpot">
     <Position X="10" Y="7" Width="1.5" />
     <TypeIdentifier>
@@ -66,48 +59,46 @@
   <Class Name="ScenerySlider.Models.InformationSpotButton" BaseTypeListCollapsed="true">
     <Position X="3.75" Y="5.75" Width="2.25" />
     <TypeIdentifier>
-      <HashCode>AAAAQIAAABCAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAgA=</HashCode>
-      <FileName>Models\Context\InformationSpotButton.cs</FileName>
+      <HashCode>AAACEIAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\InformationSpotButton.cs</FileName>
     </TypeIdentifier>
-    <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="ScenerySlider.Models.Project">
     <Position X="2.25" Y="0.5" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>AAAAAIAAAAAAAAAAAAAAAAAAAAEAAAAAAIAAAAAAAwA=</HashCode>
-      <FileName>Models\Context\Project.cs</FileName>
+      <HashCode>AAADAIAAAAAAAAAAAAAAAAgAAAEAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Project.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ScenerySlider.Models.Scene">
-    <Position X="4.25" Y="0.5" Width="1.75" />
+    <Position X="4.25" Y="0.5" Width="2.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAIAAAAAAAAAAAAAAAAAAAAgAAAAAAIAAAAAQAoA=</HashCode>
-      <FileName>Models\Context\Scene.cs</FileName>
+      <HashCode>AAACAIAAAAAAAAAAAAAACAAABAAAAAAQAAAAAAAAEAA=</HashCode>
+      <FileName>Models\Scene.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ScenerySlider.Models.SceneChangeButton" BaseTypeListCollapsed="true">
     <Position X="1.25" Y="5.75" Width="2.25" />
     <TypeIdentifier>
-      <HashCode>AAAAQIAAAACAAAAAAAAAAAAAAAAAAAAAAoAAAAAAAgA=</HashCode>
-      <FileName>Models\Context\SceneChangeButton.cs</FileName>
+      <HashCode>AAACAIAAAAAAAACAAAAAABAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\SceneChangeButton.cs</FileName>
     </TypeIdentifier>
-    <Lollipop Position="0.21" Collapsed="true" />
   </Class>
   <Class Name="ScenerySlider.Models.User">
     <Position X="0.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAKCAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAgAAEgI=</HashCode>
-      <FileName>Models\Context\User.cs</FileName>
+      <HashCode>AAACAKCAAAAAAAAAAAAAAAAAAAAAAAACAAAQAAAAAAI=</HashCode>
+      <FileName>Models\User.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ScenerySlider.Models.InformationSpot">
     <Position X="10.75" Y="3.5" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAIAAAIAAAAAAAAAAkAAAAAAAAAACAAgA=</HashCode>
+      <HashCode>AAACAIAAAAAgIAAAAAAAACQAAAAAAAAAAAAAAACAAAA=</HashCode>
       <FileName>Models\InformationSpot.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Interface Name="ScenerySlider.Models.IButton">
+  <Interface Name="ScenerySlider.IButton">
     <Position X="2.75" Y="4" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAA=</HashCode>

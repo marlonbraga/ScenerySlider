@@ -6,7 +6,7 @@ using System.Linq;
 using System.Web;
 
 namespace ScenerySlider.Models {
-	public abstract class InformationSpot {
+	public class InformationSpot {
 		[Key()]
 		public int Id { get; set; }
 		public string Name { get; set; }
@@ -17,7 +17,7 @@ namespace ScenerySlider.Models {
 			context.InformationSpots.Add(this);
 			context.SaveChanges();
 		}
-		protected abstract void Open();
-		protected abstract void Close();
+		protected virtual void Open(){ }
+		protected virtual void Close(){ }
 	}
 }
