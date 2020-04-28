@@ -1,12 +1,16 @@
 ﻿div.bg-img {
-    background-image: url(http://upload.wikimedia.org/wikipedia/commons/9/91/Flexopecten_ponticus_2008_G1.jpg);
+    background-image: url('../../Content/Images/Paço-Imperial.jpg');
     background-position: 0 0;
+    background-size: cover;
     background-repeat: no-repeat;
-    background-color: blue;
-    border: 1px solid #aaa;
-    width: 250px;
-    height: 250px;
+    background-color: rgb(0, 0, 0);
+    width: 1820px;
+    height: 980px;
     margin: 25px auto;
+    border: 10px solid #000000;
+    border-radius: 25px;
+    padding: 10px;
+    box-shadow: 30px 30px 30px black inset, -30px -30px 30px black inset, -30px 30px 30px black inset, 30px -30px 30px black inset;
 }
 
 p, #data {
@@ -14,9 +18,9 @@ p, #data {
 }
 
 #data {
-    background: red;
+    background: rgb(220, 206, 71);
     font-weight: bold;
-    color: white;
+    color: rgb(0, 0, 0);
     padding: 5px;
     font-size: 1.4em;
     border: 1px solid #ddd;

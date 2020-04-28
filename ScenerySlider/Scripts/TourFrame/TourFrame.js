@@ -5,7 +5,7 @@
             w: parseInt($bg.width()),
             h: parseInt($bg.height())
         },
-        bounds = { w: 2350 - elbounds.w, h: 1750 - elbounds.h },
+        bounds = { w: 1920 - elbounds.w, h: 1080 - elbounds.h },
         origin = { x: 0, y: 0 },
         start = { x: 0, y: 0 },
         movecontinue = false;

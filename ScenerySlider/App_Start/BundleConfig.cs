@@ -22,6 +22,14 @@ namespace ScenerySlider {
 			bundles.Add(new StyleBundle("~/Content/css").Include(
 					  "~/Content/bootstrap.css",
 					  "~/Content/site.css"));
+
+			bundles.Add(new StyleBundle("~/Content/tour").Include(
+					  "~/Content/TourFrame.css"));
+			bundles.Add(new ScriptBundle("~/bundles/tour").Include(
+					  "~/Scripts/TourFrame/TourFrame.js"));
+
+			BundleTable.EnableOptimizations = true;
+
 		}
 	}
 }
