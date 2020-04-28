@@ -12,23 +12,22 @@
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar">Users</span>
-                    <span class="icon-bar">Projects</span>
-                    <span class="icon-bar">c</span>
+                    <span class="icon-bar">|||</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
                 </button>
                 @Html.ActionLink("Scenery Slider", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                    <li>@Html.ActionLink("Users", "Details", "Users")</li>
-                    <li>@Html.ActionLink("Projects", "Details", "Projects")</li>
-                    <li>@Html.ActionLink("Scenes", "Details", "Scenes")</li>
-                    <li>@Html.ActionLink("SceneChangeButtons", "Details", "SceneChangeButtons")</li>
-                    <li>@Html.ActionLink("InformationSpots", "Details", "InformationSpots")</li>
-                    <li>@Html.ActionLink("InformationSpotButtons", "Details", "InformationSpotButtons")</li>
+                    <li>@Html.ActionLink("Users", "Index", "Users")</li>
+                    <li>@Html.ActionLink("Projects", "Index", "Projects")</li>
+                    <li>@Html.ActionLink("Scenes", "Index", "Scenes")</li>
+                    <li>@Html.ActionLink("SceneChangeButtons", "Index", "SceneChangeButtons")</li>
+                    <li>@Html.ActionLink("InformationSpots", "Index", "InformationSpots")</li>
+                    <li>@Html.ActionLink("InformationSpotButtons", "Index", "InformationSpotButtons")</li>
+                    <li>@Html.ActionLink("Tours", "Details/2", "Tours")</li>
                 </ul>
             </div>
         </div>
