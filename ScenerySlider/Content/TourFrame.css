@@ -3,14 +3,14 @@
     background-position: 0 0;
     background-size: cover;
     background-repeat: no-repeat;
-    background-color: rgb(0, 0, 0);
-    width: 1820px;
-    height: 980px;
+    background-color: #888;
+    /*width: 1820px;*/
+    height: 600px;
     margin: 25px auto;
-    border: 10px solid #000000;
+    border: 3px solid #888;
     border-radius: 25px;
     padding: 10px;
-    box-shadow: 30px 30px 30px black inset, -30px -30px 30px black inset, -30px 30px 30px black inset, 30px -30px 30px black inset;
+    box-shadow: 30px 30px 30px white inset, -30px -30px 30px white inset, -30px 30px 30px white inset, 30px -30px 30px white inset;
 }
 
 p, #data {
@@ -18,10 +18,11 @@ p, #data {
 }
 
 #data {
-    background: rgb(220, 206, 71);
+    background: white;
     font-weight: bold;
     color: rgb(0, 0, 0);
     padding: 5px;
     font-size: 1.4em;
     border: 1px solid #ddd;
+    border-radius: 5px;
 }
