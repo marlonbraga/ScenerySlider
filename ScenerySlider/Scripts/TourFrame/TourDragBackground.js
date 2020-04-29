@@ -41,12 +41,14 @@
         $bg.unbind('mousemove', move);
 
         if (e.type == 'mousedown') {
+            $(this).css('cursor', 'grabbing');
             origin.x = e.clientX;
             origin.y = e.clientY;
             movecontinue = true;
             $bg.bind('mousemove', move);
         } else {
             $(document.body).focus();
+            $(this).css('cursor', 'grab');
         }
 
         e.stopPropagation();
@@ -58,6 +60,6 @@
         $(this).css('backgroundPosition', '0 0');
     }
 
-    $bg.bind('mousedown mouseup mouseleave', handle);
+    $bg.bind('mousedown mouseup mouseleave mouseover', handle);
     $bg.bind('dblclick', reset);
 });
