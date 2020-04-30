@@ -21,7 +21,7 @@ namespace ScenerySlider {
 					"~/Content/bootstrap.css"));
 			bundles.Add(new ScriptBundle("~/bundles/icons").Include(
 					"~/Scripts/icons/a076d05399.js"));
-			bundles.Add(new StyleBundle("~/Content/tour").Include(
+			bundles.Add(new StyleBundle("~/Content/tourViewer").Include(
 					"~/Content/TourFrame.css"));
 			bundles.Add(new ScriptBundle("~/bundles/tour").Include(
 					"~/Scripts/TourFrame/TourDragBackground.js"));
