@@ -24,6 +24,7 @@ namespace ScenerySlider {
 			bundles.Add(new StyleBundle("~/Content/tourViewer").Include(
 					"~/Content/TourFrame.css"));
 			bundles.Add(new ScriptBundle("~/bundles/tour").Include(
+					"~/Scripts/TourFrame/ResponsiveScreen.js",
 					"~/Scripts/TourFrame/TourDragBackground.js"));
 			//bundles.Add(new ScriptBundle("~/bundles/tour").Include(
 			//		  "~/Scripts/TourFrame/TourRevealBackground.js"));

@@ -1,4 +1,6 @@
 ﻿$(document).ready(function () {
+    AdjustTourScreen();
+
     var $bg = $('.bg-img'),
         data = $('#data')[0],
         elbounds = {
@@ -9,7 +11,6 @@
         origin = { x: 0, y: 0 },
         start = { x: 0, y: 0 },
         movecontinue = false;
-
     function move(e) {
         var inbounds = { x: false, y: false },
             offset = {

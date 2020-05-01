@@ -1,15 +1,19 @@
-﻿div.bg-img {
+﻿body {
+    overflow-x: hidden;
+}
+div.bg-img {
     background-image: url('../../Content/Images/Paço-Imperial.jpg');
     background-position: 0 0;
-    background-size: cover;
-    background-repeat: no-repeat;
+    background-size: auto;
+    background-repeat: repeat;
     background-color: #888;
-    /*width: 1820px;*/
-    height: 600px;
-    margin: 25px auto;
-    border: 3px solid #888;
+    max-width: 1920px;
+    max-height: 1080px;
+    height: 100vh;  
+    margin: auto;
+    border: 1px solid #888;
     border-radius: 25px;
-    padding: 10px;
+    padding: 0px;
     box-shadow: 30px 30px 30px white inset, -30px -30px 30px white inset, -30px 30px 30px white inset, 30px -30px 30px white inset;
 }
 

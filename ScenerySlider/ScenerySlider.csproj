@@ -393,6 +393,7 @@
     <Content Include="Scripts\src\utils\setAttributes.js" />
     <Content Include="Scripts\src\utils\setStyles.js" />
     <Content Include="Scripts\src\utils\setupEventListeners.js" />
+    <Content Include="Scripts\TourFrame\ResponsiveScreen.js" />
     <Content Include="Scripts\TourFrame\TourRevealBackground.js" />
     <Content Include="Scripts\TourFrame\TourDragBackground.js" />
     <Content Include="Scripts\umd\popper-utils.js" />
