@@ -1,6 +1,4 @@
 ﻿$(document).ready(function () {
-    AdjustTourScreen();
-
     var $bg = $('.bg-img'),
         data = $('#data')[0],
         elbounds = {
