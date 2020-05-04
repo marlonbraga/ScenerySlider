@@ -1,0 +1,27 @@
+﻿body {
+    overflow-x: hidden;
+}
+div.bg-img {
+    background-image: url('../../Content/Images/Paço-Imperial.jpg');
+    background-position: 0 0;
+    background-size: auto; /* Definition on 'Scripts/TourFrame/ResponsiveScreen.js' */
+    background-repeat: no-repeat;
+    background-color: #888;
+    margin: auto;
+    border: 1px solid #888;
+    border-radius: 25px;
+    padding: 0px;
+    box-shadow: 30px 30px 30px white inset, -30px -30px 30px white inset, -30px 30px 30px white inset, 30px -30px 30px white inset;
+}
+p, #data {
+    text-align: center;
+}
+#data {
+    background: white;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    padding: 5px;
+    font-size: 1.4em;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}

@@ -274,7 +274,7 @@
     <Compile Include="Models\VideoSpot.cs" />
     <Compile Include="Controllers\UsersController.cs" />
     <Compile Include="Controllers\ScenesController.cs" />
-    <Compile Include="SceneChangeButtonsController.cs" />
+    <Compile Include="Controllers\SceneChangeButtonsController.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-grid.css" />
@@ -283,10 +283,15 @@
     <Content Include="Content\bootstrap-reboot.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Images\Paço-Imperial.jpg" />
+    <Content Include="Content\TourFrame.css" />
+    <Content Include="Content\Tour\bootstrap.css" />
+    <Content Include="Content\Tour\bootstrap.min.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="ClassDiagram.cd" />
+    <Content Include="Scripts\icons\a076d05399.js" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -388,6 +393,7 @@
     <Content Include="Scripts\src\utils\setAttributes.js" />
     <Content Include="Scripts\src\utils\setStyles.js" />
     <Content Include="Scripts\src\utils\setupEventListeners.js" />
+    <Content Include="Scripts\TourFrame\TourDragBackground.js" />
     <Content Include="Scripts\umd\popper-utils.js" />
     <Content Include="Scripts\umd\popper-utils.min.js" />
     <Content Include="Scripts\umd\popper.js" />
@@ -446,6 +452,7 @@
     <Content Include="Views\SceneChangeButtons\Details.cshtml" />
     <Content Include="Views\SceneChangeButtons\Edit.cshtml" />
     <Content Include="Views\SceneChangeButtons\Index.cshtml" />
+    <Content Include="Views\Scenes\Tour.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
