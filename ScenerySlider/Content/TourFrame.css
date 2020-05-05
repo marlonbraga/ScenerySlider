@@ -1,6 +1,7 @@
 ﻿body {
     overflow-x: hidden;
 }
+
 div.bg-img {
     background-image: url('../../Content/Images/Paço-Imperial.jpg');
     background-position: 0 0;
@@ -13,9 +14,11 @@ div.bg-img {
     padding: 0px;
     box-shadow: 30px 30px 30px white inset, -30px -30px 30px white inset, -30px 30px 30px white inset, 30px -30px 30px white inset;
 }
+
 p, #data {
     text-align: center;
 }
+
 #data {
     background: white;
     font-weight: bold;
@@ -24,4 +27,19 @@ p, #data {
     font-size: 1.4em;
     border: 1px solid #ddd;
     border-radius: 5px;
+}
+
+i.spot {
+    font-size: 4vw;
+    color: black;
+    opacity: 0.4;
+    font-weight: 900;
+    position: absolute;
+}
+
+    i.spot:hover {
+        color: aqua;
+        opacity: 1;
+        cursor: pointer;
+    }
 }
