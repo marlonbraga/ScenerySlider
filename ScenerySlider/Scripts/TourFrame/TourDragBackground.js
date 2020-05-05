@@ -6,8 +6,9 @@
 $(document).ready(function () {
     var $bg = $('.bg-img');
     var viewportHeight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
-    const navMargin = parseInt($('.navbar').css('margin-bottom'));
-    const navHeight = $('.nav').height();
+    $('.navbar').css('margin-bottom',0);
+    var navMargin = parseInt($('.navbar').css('margin-bottom'));
+    var navHeight = $('.navbar').height();
     const screenProportion = (16 / 9); //1.777777...
 
     function AdjustTourScreen() {

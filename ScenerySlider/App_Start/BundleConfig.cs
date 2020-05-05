@@ -5,7 +5,7 @@ using System.Web.Optimization;
 namespace ScenerySlider {
 	public class BundleConfig {
 		const string cdnBootstrapCss = "https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css";
-		
+		const string cdnBootstrapJs = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js";
 		public static void RegisterBundles(BundleCollection bundles) {
 			bundles.UseCdn = true;
 
@@ -15,9 +15,9 @@ namespace ScenerySlider {
 					"~/Scripts/jquery.validate*"));
 			bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
 					"~/Scripts/modernizr-*"));
-			bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
-					"~/Scripts/bootstrap.js"));
-			bundles.Add(new StyleBundle("~/Content/css",cdnBootstrapCss).Include(
+			bundles.Add(new ScriptBundle("~/bundles/bootstrap", cdnBootstrapJs).Include(
+					"~/Scripts/bootstrap.min.js"));
+			bundles.Add(new StyleBundle("~/Content/css", cdnBootstrapCss).Include(
 					"~/Content/bootstrap.css"));
 			bundles.Add(new ScriptBundle("~/bundles/icons").Include(
 					"~/Scripts/icons/a076d05399.js"));
