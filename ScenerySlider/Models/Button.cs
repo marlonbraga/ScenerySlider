@@ -7,5 +7,6 @@ namespace ScenerySlider.Models {
 	public abstract class Button {
 		public virtual int PositionX{ get; set; }
 		public virtual int PositionY { get; set; }
+		public virtual int Rotation { get; set; }
 	}
 }

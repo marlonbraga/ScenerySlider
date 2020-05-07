@@ -11,6 +11,7 @@ namespace ScenerySlider.Models {
         public virtual InformationSpot InformationSpot { get; set; }
         public override int PositionX { get; set; }
         public override int PositionY { get; set; }
+        public override int Rotation { get; set; }
         public void Save() {
             var context = new DatabaseContext();
             context.InformationSpotButtons.Add(this);
