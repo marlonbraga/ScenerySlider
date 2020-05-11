@@ -8,6 +8,7 @@ using System.Web;
 using System.Web.Mvc;
 using ScenerySlider.Data;
 using ScenerySlider.Models;
+using EntityState = System.Data.Entity.EntityState;
 
 namespace ScenerySlider
 {
@@ -40,7 +41,7 @@ namespace ScenerySlider
         // GET: SceneChangeButtons/Create
         public ActionResult Create()
         {
-            ViewBag.SceneId = new SelectList(db.Scenes, "Id", "Id");
+            ViewBag.SceneId = new SelectList(db.Scenes, "SceneId", "Name");
             return View();
         }
 
@@ -49,7 +50,7 @@ namespace ScenerySlider
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,SceneId,PositionX,PositionY")] SceneChangeButton sceneChangeButton)
+        public ActionResult Create([Bind(Include = "Id,SceneId,PositionX,PositionY,Rotation")] SceneChangeButton sceneChangeButton)
         {
             if (ModelState.IsValid)
             {
@@ -58,7 +59,7 @@ namespace ScenerySlider
                 return RedirectToAction("Index");
             }
 
-            ViewBag.SceneId = new SelectList(db.Scenes, "Id", "Id", sceneChangeButton.SceneId);
+            ViewBag.SceneId = new SelectList(db.Scenes, "SceneId", "Name", sceneChangeButton.SceneId);
             return View(sceneChangeButton);
         }
 
@@ -74,7 +75,7 @@ namespace ScenerySlider
             {
                 return HttpNotFound();
             }
-            ViewBag.SceneId = new SelectList(db.Scenes, "Id", "Id", sceneChangeButton.SceneId);
+            ViewBag.SceneId = new SelectList(db.Scenes, "SceneId", "Name", sceneChangeButton.SceneId);
             return View(sceneChangeButton);
         }
 
@@ -83,15 +84,15 @@ namespace ScenerySlider
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,SceneId,PositionX,PositionY")] SceneChangeButton sceneChangeButton)
+        public ActionResult Edit([Bind(Include = "Id,SceneId,PositionX,PositionY,Rotation")] SceneChangeButton sceneChangeButton)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(sceneChangeButton).State = System.Data.Entity.EntityState.Modified;
+                db.Entry(sceneChangeButton).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.SceneId = new SelectList(db.Scenes, "Id", "Id", sceneChangeButton.SceneId);
+            ViewBag.SceneId = new SelectList(db.Scenes, "SceneId", "Name", sceneChangeButton.SceneId);
             return View(sceneChangeButton);
         }
 

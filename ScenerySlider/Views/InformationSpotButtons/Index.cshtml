@@ -15,10 +15,16 @@
             @Html.DisplayNameFor(model => model.InformationSpot.Name)
         </th>
         <th>
+            @Html.DisplayNameFor(model => model.Scene.Name)
+        </th>
+        <th>
             @Html.DisplayNameFor(model => model.PositionX)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.PositionY)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Rotation)
         </th>
         <th></th>
     </tr>
@@ -29,10 +35,16 @@
             @Html.DisplayFor(modelItem => item.InformationSpot.Name)
         </td>
         <td>
+            @Html.DisplayFor(modelItem => item.Scene.Name)
+        </td>
+        <td>
             @Html.DisplayFor(modelItem => item.PositionX)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.PositionY)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Rotation)
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |

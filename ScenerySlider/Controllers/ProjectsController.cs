@@ -8,6 +8,7 @@ using System.Web;
 using System.Web.Mvc;
 using ScenerySlider.Data;
 using ScenerySlider.Models;
+using EntityState = System.Data.Entity.EntityState;
 
 namespace ScenerySlider
 {
@@ -87,7 +88,7 @@ namespace ScenerySlider
         {
             if (ModelState.IsValid)
             {
-                db.Entry(project).State = System.Data.Entity.EntityState.Modified;
+                db.Entry(project).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }

@@ -234,8 +234,8 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Controllers\InformationSpotButtonsController.cs" />
     <Compile Include="Controllers\InformationSpotsController.cs" />
+    <Compile Include="Controllers\InformationSpotButtonsController.cs" />
     <Compile Include="Migrations\20200425003451_Initial.cs" />
     <Compile Include="Migrations\20200425003451_Initial.designer.cs">
       <DependentUpon>20200425003451_Initial.cs</DependentUpon>
@@ -256,6 +256,18 @@
     <Compile Include="Migrations\20200425173221_NotMapping.designer.cs">
       <DependentUpon>20200425173221_NotMapping.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\20200508010439_newProprieties.cs" />
+    <Compile Include="Migrations\20200508010439_newProprieties.designer.cs">
+      <DependentUpon>20200508010439_newProprieties.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20200508131337_newProprietiesOfIcon.cs" />
+    <Compile Include="Migrations\20200508131337_newProprietiesOfIcon.designer.cs">
+      <DependentUpon>20200508131337_newProprietiesOfIcon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20200508132951_fixNewProprietiesOfIcon.cs" />
+    <Compile Include="Migrations\20200508132951_fixNewProprietiesOfIcon.designer.cs">
+      <DependentUpon>20200508132951_fixNewProprietiesOfIcon.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\DatabaseContextModelSnapshot.cs" />
     <Compile Include="Models\AudioSpot.cs" />
     <Compile Include="Models\Button.cs" />
@@ -273,8 +285,8 @@
     <Compile Include="Models\TextSpot.cs" />
     <Compile Include="Models\VideoSpot.cs" />
     <Compile Include="Controllers\UsersController.cs" />
-    <Compile Include="Controllers\ScenesController.cs" />
     <Compile Include="Controllers\SceneChangeButtonsController.cs" />
+    <Compile Include="Controllers\ScenesController.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-theme.css" />
@@ -408,11 +420,6 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Users\Create.cshtml" />
-    <Content Include="Views\Users\Delete.cshtml" />
-    <Content Include="Views\Users\Details.cshtml" />
-    <Content Include="Views\Users\Edit.cshtml" />
-    <Content Include="Views\Users\Index.cshtml" />
     <Content Include="Scripts\umd\popper.min.js.map" />
     <Content Include="Scripts\umd\popper.js.map" />
     <Content Include="Scripts\umd\popper.js.flow" />
@@ -423,21 +430,22 @@
     <Content Include="Scripts\popper.js.map" />
     <Content Include="Scripts\popper-utils.min.js.map" />
     <Content Include="Scripts\popper-utils.js.map" />
-    <Content Include="Views\Projects\Create.cshtml" />
-    <Content Include="Views\Projects\Delete.cshtml" />
-    <Content Include="Views\Projects\Details.cshtml" />
-    <Content Include="Views\Projects\Edit.cshtml" />
-    <Content Include="Views\Projects\Index.cshtml" />
+    <Content Include="Views\Scenes\Tour.cshtml" />
     <Content Include="Views\InformationSpots\Create.cshtml" />
     <Content Include="Views\InformationSpots\Delete.cshtml" />
     <Content Include="Views\InformationSpots\Details.cshtml" />
     <Content Include="Views\InformationSpots\Edit.cshtml" />
     <Content Include="Views\InformationSpots\Index.cshtml" />
-    <Content Include="Views\InformationSpotButtons\Create.cshtml" />
-    <Content Include="Views\InformationSpotButtons\Delete.cshtml" />
-    <Content Include="Views\InformationSpotButtons\Details.cshtml" />
-    <Content Include="Views\InformationSpotButtons\Edit.cshtml" />
-    <Content Include="Views\InformationSpotButtons\Index.cshtml" />
+    <Content Include="Views\Users\Create.cshtml" />
+    <Content Include="Views\Users\Delete.cshtml" />
+    <Content Include="Views\Users\Details.cshtml" />
+    <Content Include="Views\Users\Edit.cshtml" />
+    <Content Include="Views\Users\Index.cshtml" />
+    <Content Include="Views\Projects\Create.cshtml" />
+    <Content Include="Views\Projects\Delete.cshtml" />
+    <Content Include="Views\Projects\Details.cshtml" />
+    <Content Include="Views\Projects\Edit.cshtml" />
+    <Content Include="Views\Projects\Index.cshtml" />
     <Content Include="Views\Scenes\Create.cshtml" />
     <Content Include="Views\Scenes\Delete.cshtml" />
     <Content Include="Views\Scenes\Details.cshtml" />
@@ -448,7 +456,11 @@
     <Content Include="Views\SceneChangeButtons\Details.cshtml" />
     <Content Include="Views\SceneChangeButtons\Edit.cshtml" />
     <Content Include="Views\SceneChangeButtons\Index.cshtml" />
-    <Content Include="Views\Scenes\Tour.cshtml" />
+    <Content Include="Views\InformationSpotButtons\Create.cshtml" />
+    <Content Include="Views\InformationSpotButtons\Delete.cshtml" />
+    <Content Include="Views\InformationSpotButtons\Details.cshtml" />
+    <Content Include="Views\InformationSpotButtons\Edit.cshtml" />
+    <Content Include="Views\InformationSpotButtons\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

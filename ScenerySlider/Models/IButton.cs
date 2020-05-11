@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace ScenerySlider {
 	interface IButton {
-		int positionX { get; set; }
-		int positionY { get; set; }
+		string Icon { get; set; }
+		int PositionX { get; set; }
+		int PositionY { get; set; }
+		int Rotation { get; set; }
 	}
 }

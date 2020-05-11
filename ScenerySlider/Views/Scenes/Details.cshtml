@@ -11,14 +11,6 @@
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.InformationSpotButton.Id)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.InformationSpotButton.Id)
-        </dd>
-
-        <dt>
             @Html.DisplayNameFor(model => model.Project.Name)
         </dt>
 
@@ -26,10 +18,33 @@
             @Html.DisplayFor(model => model.Project.Name)
         </dd>
 
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BackgroundLocation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BackgroundLocation)
+        </dd>
+
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
-    @Html.ActionLink("Back to List", "Index") |
-    @Html.ActionLink("View Tour", "Tour")
+    @Html.ActionLink("Edit", "Edit", new { id = Model.SceneId }) |
+    @Html.ActionLink("Back to List", "Index")
 </p>

@@ -20,5 +20,7 @@ namespace ScenerySlider.Data
         }
 
         public System.Data.Entity.DbSet<ScenerySlider.Models.User> Users { get; set; }
+
+        public System.Data.Entity.DbSet<ScenerySlider.Models.Project> Projects { get; set; }
     }
 }

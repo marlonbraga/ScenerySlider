@@ -8,6 +8,7 @@ using System.Web;
 using System.Web.Mvc;
 using ScenerySlider.Data;
 using ScenerySlider.Models;
+using EntityState = System.Data.Entity.EntityState;
 
 namespace ScenerySlider
 {
@@ -18,7 +19,7 @@ namespace ScenerySlider
         // GET: Scenes
         public ActionResult Index()
         {
-            var scenes = db.Scenes.Include(s => s.InformationSpotButton).Include(s => s.Project);
+            var scenes = db.Scenes.Include(s => s.Project);
             return View(scenes.ToList());
         }
 
@@ -37,21 +38,9 @@ namespace ScenerySlider
             return View(scene);
         }
 
-        // GET: Scenes/Tour/5
-        public ActionResult Tour(int? id) {
-            if(id == null) {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            Scene scene = db.Scenes.Find(id);
-            if(scene == null) {
-                return HttpNotFound();
-            }
-            return View(scene);
-        }
         // GET: Scenes/Create
         public ActionResult Create()
         {
-            ViewBag.InformationSpotButtonId = new SelectList(db.InformationSpotButtons, "Id", "Id");
             ViewBag.ProjectId = new SelectList(db.Projects, "Id", "Name");
             return View();
         }
@@ -61,7 +50,7 @@ namespace ScenerySlider
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,ProjectId,InformationSpotButtonId")] Scene scene)
+        public ActionResult Create([Bind(Include = "SceneId,Name,Description,BackgroundLocation,ProjectId")] Scene scene)
         {
             if (ModelState.IsValid)
             {
@@ -70,7 +59,6 @@ namespace ScenerySlider
                 return RedirectToAction("Index");
             }
 
-            ViewBag.InformationSpotButtonId = new SelectList(db.InformationSpotButtons, "Id", "Id", scene.InformationSpotButtonId);
             ViewBag.ProjectId = new SelectList(db.Projects, "Id", "Name", scene.ProjectId);
             return View(scene);
         }
@@ -87,7 +75,6 @@ namespace ScenerySlider
             {
                 return HttpNotFound();
             }
-            ViewBag.InformationSpotButtonId = new SelectList(db.InformationSpotButtons, "Id", "Id", scene.InformationSpotButtonId);
             ViewBag.ProjectId = new SelectList(db.Projects, "Id", "Name", scene.ProjectId);
             return View(scene);
         }
@@ -97,15 +84,14 @@ namespace ScenerySlider
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,ProjectId,InformationSpotButtonId")] Scene scene)
+        public ActionResult Edit([Bind(Include = "SceneId,Name,Description,BackgroundLocation,ProjectId")] Scene scene)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(scene).State = System.Data.Entity.EntityState.Modified;
+                db.Entry(scene).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.InformationSpotButtonId = new SelectList(db.InformationSpotButtons, "Id", "Id", scene.InformationSpotButtonId);
             ViewBag.ProjectId = new SelectList(db.Projects, "Id", "Name", scene.ProjectId);
             return View(scene);
         }

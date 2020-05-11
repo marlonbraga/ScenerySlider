@@ -12,5 +12,9 @@ namespace ScenerySlider.Data {
 		protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) {
 			optionsBuilder.UseSqlServer("Integrated Security=SSPI;Persist Security Info=False;User ID=DESKTOP-9TDQBPT/OverReal;Initial Catalog=ScenerySlider;Data Source=DESKTOP-9TDQBPT");
 		}
+		//protected override void OnModelCreating(ModelBuilder modelBuilder) {
+		//	Database.SetInitializer<ProjectContext>(null);
+		//	base.OnModelCreating(modelBuilder);
+		//}
 	}
 }

@@ -6,7 +6,8 @@ using ScenerySlider.Data;
 namespace ScenerySlider.Models {
     public class Scene {
         [Key()]
-        public int Id { get; set; }
+        public int SceneId { get; set; }
+
         public string Name { get; set; }
         public string Description { get; set; }
         public string BackgroundLocation { get; set; }
@@ -16,14 +17,10 @@ namespace ScenerySlider.Models {
         public virtual Project Project { get; set; }
         
         //TODO-1:List of info spots 
-        public List<SceneChangeButton> SceneChangeButtons;
+        public virtual ICollection<SceneChangeButton> SceneChangeButton { get; set; }
         //TODO-2:List of scene spots 
-        public List<InformationSpotButton> InformationSpotButtons;
+        public virtual ICollection<InformationSpotButton> InformationSpotButton { get; set; }
 
-        //[ForeignKey("InformationSpotButton")]
-        //public int InformationSpotButtonId { get; set; }
-        //public virtual InformationSpotButton InformationSpotButton { get; set; }
-        
         public void Save() {
             var context = new DatabaseContext();
             context.Scenes.Add(this);

@@ -9,6 +9,7 @@ namespace ScenerySlider.Models {
         [ForeignKey("Scene")]
         public int SceneId { get; set; }
         public virtual Scene Scene { get; set; }
+        public override string Icon { get; set; }
         public override int PositionX { get; set; }
         public override int PositionY { get; set; }
         public override int Rotation { get; set; }

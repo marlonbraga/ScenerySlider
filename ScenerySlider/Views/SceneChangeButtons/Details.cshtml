@@ -11,11 +11,11 @@
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.Scene.Id)
+            @Html.DisplayNameFor(model => model.Scene.Name)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Scene.Id)
+            @Html.DisplayFor(model => model.Scene.Name)
         </dd>
 
         <dt>
@@ -32,6 +32,14 @@
 
         <dd>
             @Html.DisplayFor(model => model.PositionY)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Rotation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Rotation)
         </dd>
 
     </dl>
