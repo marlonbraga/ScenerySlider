@@ -15,7 +15,7 @@ namespace ScenerySlider.Data
         // For more information refer to the documentation:
         // http://msdn.microsoft.com/en-us/data/jj591621.aspx
     
-        public SceneContext() : base("name=SceneContext")
+        public SceneContext() : base("name=ScenerySlider")
         {
         }
         public System.Data.Entity.DbSet<ScenerySlider.Models.Scene> Scenes { get; set; }

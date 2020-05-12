@@ -14,7 +14,7 @@ namespace ScenerySlider {
 			BundleConfig.RegisterBundles(BundleTable.Bundles);
 			BundleTable.EnableOptimizations = true;
 
-			Database.SetInitializer(new DropCreateDatabaseIfModelChanges<SceneContext>());
+			//Database.SetInitializer(new DropCreateDatabaseIfModelChanges<SceneContext>());
 		}
 
 		private void RegisterRoutes(RouteCollection routes) {
