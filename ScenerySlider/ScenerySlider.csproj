@@ -293,8 +293,9 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\Images\Paço-Imperial-Interior.jpg" />
-    <Content Include="Content\Images\Paço-Imperial.jpg" />
+    <Content Include="Content\font-awesome.css" />
+    <Content Include="Content\Images\Paco-Imperial-Interior.jpg" />
+    <Content Include="Content\Images\Paco-Imperial.jpg" />
     <Content Include="Content\TourFrame.css" />
     <Content Include="Content\Tour\bootstrap.css" />
     <Content Include="Content\Tour\bootstrap.min.css" />

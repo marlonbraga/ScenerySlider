@@ -2,6 +2,11 @@
 
 @{
     ViewBag.Title = "Tour";
+    <script>
+        $(document).ready(function () {
+            $('div.bg-img').css("background-image", "url(@Model.BackgroundLocation)");
+        });
+    </script>
 }
     <div class="bg-img">
         @{
@@ -11,13 +16,23 @@
                     .Where(scene => scene.SceneId == Model.SceneId)
                     .ToList();
                 for(int i = 0; i < sceneButton.Count(); i++) {
-                    <a href="@Url.Action("Tour", "Scenes", new { id = sceneButton[i].SceneId })">
-                        <i style="top:@sceneButton[i].PositionY%; left:@sceneButton[i].PositionX%;" class="spot @sceneButton[i].Icon"></i>
+                <a href="@Url.Action("Tour", "Scenes", new { id = sceneButton[i].SceneId })">
+                    @*TODO: Change 'sceneButton[i].SceneId' on line above to new column 'Target' on database table *@
+                    <i style="top:@sceneButton[i].PositionY%; left:@sceneButton[i].PositionX%;" class="spot @sceneButton[i].Icon"></i>
+                </a>
+                }
+            }
+            using(var context = new ScenerySlider.Data.InformationSpotButtonContext()) {
+                var informationButton = context.InformationSpotButtons
+                .Where(scene => scene.SceneId == Model.SceneId)
+                .ToList();
+                for(int i = 0; i < informationButton.Count(); i++) {
+                    <a href="@Url.Action("Tour", "Scenes", new { id = informationButton[i].SceneId })">
+                        <i style="top:@informationButton[i].PositionY%; left:@informationButton[i].PositionX%;" class="spot @informationButton[i].Icon"></i>
                     </a>
-                }           
+                }
             }
         }
-        @*<i style="top:50%; left:40%;" class="spot fa fa-arrow-up"></i>*@
     </div>
 <p>
     <input type="text" id="data" />

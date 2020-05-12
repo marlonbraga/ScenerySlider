@@ -6,6 +6,8 @@ namespace ScenerySlider.Models {
     public class SceneChangeButton : Button {
         [Key()]
         public int Id { get; set; }
+        //[ForeignKey("Scene")]
+        //public int SceneTarget { get; set; }
         [ForeignKey("Scene")]
         public int SceneId { get; set; }
         public virtual Scene Scene { get; set; }

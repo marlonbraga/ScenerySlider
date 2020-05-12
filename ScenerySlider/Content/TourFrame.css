@@ -3,7 +3,6 @@
 }
 
 div.bg-img {
-    background-image: url('../../Content/Images/Paço-Imperial.jpg');
     background-position: 0 0;
     background-size: auto; /* Definition on 'Scripts/TourFrame/TourDragBackground.js' */
     background-repeat: no-repeat;
@@ -42,4 +41,3 @@ i.spot {
         opacity: 1;
         cursor: pointer;
     }
-}
