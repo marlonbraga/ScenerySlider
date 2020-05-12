@@ -1,14 +1,24 @@
 ﻿@model ScenerySlider.Models.Scene
 
 @{
-    ViewBag.Title = "Details";
+    ViewBag.Title = "Tour";
 }
-<div class="bg-img">
-    <i style="top:50%; left:40%;" class="spot fas fa-arrow-up"></i>
-    <i style="top:50%; left:50%;" class="spot fas fa-eye"></i>
-    <i style="top:100%; left:100%;" class="spot fas fa-exclamation-circle"></i>
-    <i style="top:50%; left:40%;" class="spot fa fa-arrow-up"></i>
-</div>
+    <div class="bg-img">
+        @{
+            using(var context = new ScenerySlider.Data.SceneChangeButtonContext()) {
+
+                var sceneButton = context.SceneChangeButtons
+                    .Where(scene => scene.SceneId == Model.SceneId)
+                    .ToList();
+                for(int i = 0; i < sceneButton.Count(); i++) {
+                    <a href="@Url.Action("Tour", "Scenes", new { id = sceneButton[i].SceneId })">
+                        <i style="top:@sceneButton[i].PositionY%; left:@sceneButton[i].PositionX%;" class="spot @sceneButton[i].Icon"></i>
+                    </a>
+                }           
+            }
+        }
+        @*<i style="top:50%; left:40%;" class="spot fa fa-arrow-up"></i>*@
+    </div>
 <p>
-    <input type="text" id="data"/>
+    <input type="text" id="data" />
 </p>
