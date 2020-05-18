@@ -16,9 +16,8 @@ namespace ScenerySlider.Models {
         public int ProjectId { get; set; }
         public virtual Project Project { get; set; }
         
-        //TODO-1:List of info spots 
-        public virtual ICollection<SceneChangeButton> SceneChangeButton { get; set; }
-        //TODO-2:List of scene spots 
+        public virtual ICollection<SceneButton> SwitchSceneButton { get; set; }
+        public virtual ICollection<SceneButton> EntryButton { get; set; }
         public virtual ICollection<InformationSpotButton> InformationSpotButton { get; set; }
 
         public void Save() {

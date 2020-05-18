@@ -14,12 +14,12 @@ namespace ScenerySlider
 {
     public class SceneChangeButtonsController : Controller
     {
-        private SceneChangeButtonContext db = new SceneChangeButtonContext();
+        private SceneButtonContext db = new SceneButtonContext();
 
         // GET: SceneChangeButtons
         public ActionResult Index()
         {
-            var sceneChangeButtons = db.SceneChangeButtons.Include(s => s.Scene);
+            var sceneChangeButtons = db.SceneChangeButtons.Include(s => s.OwnerScene);
             return View(sceneChangeButtons.ToList());
         }
 
@@ -30,7 +30,7 @@ namespace ScenerySlider
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            SceneChangeButton sceneChangeButton = db.SceneChangeButtons.Find(id);
+            SceneButton sceneChangeButton = db.SceneChangeButtons.Find(id);
             if (sceneChangeButton == null)
             {
                 return HttpNotFound();
@@ -50,7 +50,7 @@ namespace ScenerySlider
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,SceneId,PositionX,PositionY,Rotation")] SceneChangeButton sceneChangeButton)
+        public ActionResult Create([Bind(Include = "Id,SceneId,PositionX,PositionY,Rotation")] SceneButton sceneChangeButton)
         {
             if (ModelState.IsValid)
             {
@@ -59,7 +59,7 @@ namespace ScenerySlider
                 return RedirectToAction("Index");
             }
 
-            ViewBag.SceneId = new SelectList(db.Scenes, "SceneId", "Name", sceneChangeButton.SceneId);
+            ViewBag.SceneId = new SelectList(db.Scenes, "SceneId", "Name", sceneChangeButton.OwnerSceneId);
             return View(sceneChangeButton);
         }
 
@@ -70,12 +70,12 @@ namespace ScenerySlider
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            SceneChangeButton sceneChangeButton = db.SceneChangeButtons.Find(id);
+            SceneButton sceneChangeButton = db.SceneChangeButtons.Find(id);
             if (sceneChangeButton == null)
             {
                 return HttpNotFound();
             }
-            ViewBag.SceneId = new SelectList(db.Scenes, "SceneId", "Name", sceneChangeButton.SceneId);
+            ViewBag.SceneId = new SelectList(db.Scenes, "SceneId", "Name", sceneChangeButton.OwnerSceneId);
             return View(sceneChangeButton);
         }
 
@@ -84,7 +84,7 @@ namespace ScenerySlider
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,SceneId,PositionX,PositionY,Rotation")] SceneChangeButton sceneChangeButton)
+        public ActionResult Edit([Bind(Include = "Id,SceneId,PositionX,PositionY,Rotation")] SceneButton sceneChangeButton)
         {
             if (ModelState.IsValid)
             {
@@ -92,7 +92,7 @@ namespace ScenerySlider
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.SceneId = new SelectList(db.Scenes, "SceneId", "Name", sceneChangeButton.SceneId);
+            ViewBag.SceneId = new SelectList(db.Scenes, "SceneId", "Name", sceneChangeButton.OwnerSceneId);
             return View(sceneChangeButton);
         }
 
@@ -103,7 +103,7 @@ namespace ScenerySlider
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            SceneChangeButton sceneChangeButton = db.SceneChangeButtons.Find(id);
+            SceneButton sceneChangeButton = db.SceneChangeButtons.Find(id);
             if (sceneChangeButton == null)
             {
                 return HttpNotFound();
@@ -116,7 +116,7 @@ namespace ScenerySlider
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            SceneChangeButton sceneChangeButton = db.SceneChangeButtons.Find(id);
+            SceneButton sceneChangeButton = db.SceneChangeButtons.Find(id);
             db.SceneChangeButtons.Remove(sceneChangeButton);
             db.SaveChanges();
             return RedirectToAction("Index");
