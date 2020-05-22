@@ -13,7 +13,7 @@
             using(var context = new ScenerySlider.Data.SceneButtonContext()) {
 
                 var sceneButton = context.SceneButtons
-                    .Where(scene => scene.TargetSceneId == Model.SceneId)
+                    .Where(scene => scene.OwnerSceneId == Model.SceneId)
                     .ToList();
                 for(int i = 0; i < sceneButton.Count(); i++) {
                 <a href="@Url.Action("Tour", "Scenes", new { id = sceneButton[i].TargetSceneId })">

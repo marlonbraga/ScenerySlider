@@ -18,8 +18,8 @@ namespace ScenerySlider
         // GET: SceneButtons
         public ActionResult Index()
         {
-            var sceneChangeButtons = db.SceneButtons.Include(s => s.OwnerScene).Include(s => s.TargetScene);
-            return View(sceneChangeButtons.ToList());
+            var sceneButtons = db.SceneButtons.Include(s => s.OwnerScene).Include(s => s.TargetScene);
+            return View(sceneButtons.ToList());
         }
 
         // GET: SceneButtons/Details/5

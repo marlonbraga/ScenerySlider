@@ -3,6 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using ScenerySlider.Data;
 
 namespace ScenerySlider.Models {
+    [Table("SceneButtons")]
     public class SceneButton : Button {
         [Key()]
         public int Id { get; set; }
