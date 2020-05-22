@@ -6,10 +6,10 @@ namespace ScenerySlider.Models {
     public class SceneButton : Button {
         [Key()]
         public int Id { get; set; }
-        [ForeignKey("Scene")]
+        [ForeignKey("TargetScene")]
         public int? TargetSceneId { get; set; }
         public virtual Scene TargetScene { get; set; }
-        [ForeignKey("Scene")]
+        [ForeignKey("OwnerScene")]
         public int? OwnerSceneId { get; set; }
         public virtual Scene OwnerScene { get; set; }
         public override string Icon { get; set; }

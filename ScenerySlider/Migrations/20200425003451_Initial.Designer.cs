@@ -111,7 +111,7 @@ namespace ScenerySlider.Migrations
 
                     b.HasIndex("SceneDestinationId");
 
-                    b.ToTable("SceneChangeButtons");
+                    b.ToTable("SceneButtons");
                 });
 
             modelBuilder.Entity("ScenerySlider.Models.User", b =>

@@ -8,46 +8,46 @@ namespace ScenerySlider.Migrations
         {
             migrationBuilder.DropForeignKey(
                 name: "FK_SceneChangeButtons_Scenes_SceneId",
-                table: "SceneChangeButtons");
+                table: "SceneButtons");
 
             migrationBuilder.DropIndex(
                 name: "IX_SceneChangeButtons_SceneId",
-                table: "SceneChangeButtons");
+                table: "SceneButtons");
 
             migrationBuilder.DropColumn(
                 name: "SceneId",
-                table: "SceneChangeButtons");
+                table: "SceneButtons");
 
             migrationBuilder.AddColumn<int>(
                 name: "OwnerSceneId",
-                table: "SceneChangeButtons",
+                table: "SceneButtons",
                 nullable: true);
 
             migrationBuilder.AddColumn<int>(
                 name: "TargetSceneId",
-                table: "SceneChangeButtons",
+                table: "SceneButtons",
                 nullable: true);
 
             migrationBuilder.CreateIndex(
                 name: "IX_SceneChangeButtons_OwnerSceneId",
-                table: "SceneChangeButtons",
+                table: "SceneButtons",
                 column: "OwnerSceneId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_SceneChangeButtons_TargetSceneId",
-                table: "SceneChangeButtons",
+                table: "SceneButtons",
                 column: "TargetSceneId");
 
             migrationBuilder.AddForeignKey(
                 name: "FK_SceneChangeButtons_Scenes_OwnerSceneId",
-                table: "SceneChangeButtons",
+                table: "SceneButtons",
                 column: "OwnerSceneId",
                 principalTable: "Scenes",
                 principalColumn: "SceneId");
 
             migrationBuilder.AddForeignKey(
                 name: "FK_SceneChangeButtons_Scenes_TargetSceneId",
-                table: "SceneChangeButtons",
+                table: "SceneButtons",
                 column: "TargetSceneId",
                 principalTable: "Scenes",
                 principalColumn: "SceneId");
@@ -57,43 +57,43 @@ namespace ScenerySlider.Migrations
         {
             migrationBuilder.DropForeignKey(
                 name: "FK_SceneChangeButtons_Scenes_OwnerSceneId",
-                table: "SceneChangeButtons");
+                table: "SceneButtons");
 
             migrationBuilder.DropForeignKey(
                 name: "FK_SceneChangeButtons_Scenes_TargetSceneId",
-                table: "SceneChangeButtons");
+                table: "SceneButtons");
 
             migrationBuilder.DropIndex(
                 name: "IX_SceneChangeButtons_OwnerSceneId",
-                table: "SceneChangeButtons");
+                table: "SceneButtons");
 
             migrationBuilder.DropIndex(
                 name: "IX_SceneChangeButtons_TargetSceneId",
-                table: "SceneChangeButtons");
+                table: "SceneButtons");
 
             migrationBuilder.DropColumn(
                 name: "OwnerSceneId",
-                table: "SceneChangeButtons");
+                table: "SceneButtons");
 
             migrationBuilder.DropColumn(
                 name: "TargetSceneId",
-                table: "SceneChangeButtons");
+                table: "SceneButtons");
 
             migrationBuilder.AddColumn<int>(
                 name: "SceneId",
-                table: "SceneChangeButtons",
+                table: "SceneButtons",
                 type: "int",
                 nullable: false,
                 defaultValue: 0);
 
             migrationBuilder.CreateIndex(
                 name: "IX_SceneChangeButtons_SceneId",
-                table: "SceneChangeButtons",
+                table: "SceneButtons",
                 column: "SceneId");
 
             migrationBuilder.AddForeignKey(
                 name: "FK_SceneChangeButtons_Scenes_SceneId",
-                table: "SceneChangeButtons",
+                table: "SceneButtons",
                 column: "SceneId",
                 principalTable: "Scenes",
                 principalColumn: "SceneId",

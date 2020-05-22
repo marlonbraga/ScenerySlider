@@ -8,7 +8,6 @@ using System.Web;
 using System.Web.Mvc;
 using ScenerySlider.Data;
 using ScenerySlider.Models;
-using EntityState = System.Data.Entity.EntityState;
 
 namespace ScenerySlider
 {
@@ -37,6 +36,7 @@ namespace ScenerySlider
             }
             return View(scene);
         }
+
         // GET: Scenes/Tour/5
         public ActionResult Tour(int? id)
         {

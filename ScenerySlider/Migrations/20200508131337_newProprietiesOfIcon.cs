@@ -8,7 +8,7 @@ namespace ScenerySlider.Migrations
         {
             migrationBuilder.AddColumn<string>(
                 name: "Icon",
-                table: "SceneChangeButtons",
+                table: "SceneButtons",
                 nullable: true);
 
             migrationBuilder.AddColumn<string>(
@@ -21,7 +21,7 @@ namespace ScenerySlider.Migrations
         {
             migrationBuilder.DropColumn(
                 name: "Icon",
-                table: "SceneChangeButtons");
+                table: "SceneButtons");
 
             migrationBuilder.DropColumn(
                 name: "Icon",

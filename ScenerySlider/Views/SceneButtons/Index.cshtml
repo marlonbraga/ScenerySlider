@@ -1,4 +1,4 @@
-﻿@model IEnumerable<ScenerySlider.Models.SceneChangeButton>
+﻿@model IEnumerable<ScenerySlider.Models.SceneButton>
 
 @{
     ViewBag.Title = "Index";
@@ -12,7 +12,13 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.Scene.Name)
+            @Html.DisplayNameFor(model => model.OwnerScene.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TargetScene.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Icon)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.PositionX)
@@ -29,7 +35,13 @@
 @foreach (var item in Model) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.Scene.Name)
+            @Html.DisplayFor(modelItem => item.OwnerScene.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TargetScene.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Icon)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.PositionX)

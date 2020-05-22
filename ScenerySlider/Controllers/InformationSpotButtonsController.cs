@@ -8,7 +8,6 @@ using System.Web;
 using System.Web.Mvc;
 using ScenerySlider.Data;
 using ScenerySlider.Models;
-using EntityState = System.Data.Entity.EntityState;
 
 namespace ScenerySlider
 {
@@ -51,7 +50,7 @@ namespace ScenerySlider
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,SceneId,InformationSpotId,PositionX,PositionY,Rotation")] InformationSpotButton informationSpotButton)
+        public ActionResult Create([Bind(Include = "Id,SceneId,InformationSpotId,Icon,PositionX,PositionY,Rotation")] InformationSpotButton informationSpotButton)
         {
             if (ModelState.IsValid)
             {
@@ -87,7 +86,7 @@ namespace ScenerySlider
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,SceneId,InformationSpotId,PositionX,PositionY,Rotation")] InformationSpotButton informationSpotButton)
+        public ActionResult Edit([Bind(Include = "Id,SceneId,InformationSpotId,Icon,PositionX,PositionY,Rotation")] InformationSpotButton informationSpotButton)
         {
             if (ModelState.IsValid)
             {

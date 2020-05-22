@@ -17,7 +17,7 @@ namespace ScenerySlider.Data {
 		public SceneButtonContext() : base("name=ScenerySlider") {
 		}
 
-		public System.Data.Entity.DbSet<ScenerySlider.Models.SceneButton> SceneChangeButtons { get; set; }
+		public System.Data.Entity.DbSet<ScenerySlider.Models.SceneButton> SceneButtons { get; set; }
 		public System.Data.Entity.DbSet<ScenerySlider.Models.Scene> Scenes { get; set; }
 		
 		protected override void OnModelCreating(DbModelBuilder modelBuilder) {

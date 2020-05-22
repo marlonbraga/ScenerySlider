@@ -10,14 +10,13 @@
 }
     <div class="bg-img">
         @{
-            using(var context = new ScenerySlider.Data.SceneChangeButtonContext()) {
+            using(var context = new ScenerySlider.Data.SceneButtonContext()) {
 
-                var sceneButton = context.SceneChangeButtons
-                    .Where(scene => scene.SceneId == Model.SceneId)
+                var sceneButton = context.SceneButtons
+                    .Where(scene => scene.TargetSceneId == Model.SceneId)
                     .ToList();
                 for(int i = 0; i < sceneButton.Count(); i++) {
-                <a href="@Url.Action("Tour", "Scenes", new { id = sceneButton[i].SceneId })">
-                    @*TODO: Change 'sceneButton[i].SceneId' on line above to new column 'Target' on database table *@
+                <a href="@Url.Action("Tour", "Scenes", new { id = sceneButton[i].TargetSceneId })">
                     <i style="top:@sceneButton[i].PositionY%; left:@sceneButton[i].PositionX%;" class="spot @sceneButton[i].Icon"></i>
                 </a>
                 }

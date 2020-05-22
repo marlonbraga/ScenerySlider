@@ -8,7 +8,7 @@ namespace ScenerySlider.Migrations
         {
             migrationBuilder.DropForeignKey(
                 name: "FK_SceneChangeButtons_Scenes_SceneId",
-                table: "SceneChangeButtons");
+                table: "SceneButtons");
 
             migrationBuilder.DropForeignKey(
                 name: "FK_Scenes_InformationSpotButtons_InformationSpotButtonId",
@@ -54,7 +54,7 @@ namespace ScenerySlider.Migrations
 
             migrationBuilder.AddColumn<int>(
                 name: "Rotation",
-                table: "SceneChangeButtons",
+                table: "SceneButtons",
                 nullable: false,
                 defaultValue: 0);
 
@@ -90,7 +90,7 @@ namespace ScenerySlider.Migrations
 
             migrationBuilder.AddForeignKey(
                 name: "FK_SceneChangeButtons_Scenes_SceneId",
-                table: "SceneChangeButtons",
+                table: "SceneButtons",
                 column: "SceneId",
                 principalTable: "Scenes",
                 principalColumn: "SceneId",
@@ -105,7 +105,7 @@ namespace ScenerySlider.Migrations
 
             migrationBuilder.DropForeignKey(
                 name: "FK_SceneChangeButtons_Scenes_SceneId",
-                table: "SceneChangeButtons");
+                table: "SceneButtons");
 
             migrationBuilder.DropPrimaryKey(
                 name: "PK_Scenes",
@@ -133,7 +133,7 @@ namespace ScenerySlider.Migrations
 
             migrationBuilder.DropColumn(
                 name: "Rotation",
-                table: "SceneChangeButtons");
+                table: "SceneButtons");
 
             migrationBuilder.DropColumn(
                 name: "Rotation",
@@ -170,7 +170,7 @@ namespace ScenerySlider.Migrations
 
             migrationBuilder.AddForeignKey(
                 name: "FK_SceneChangeButtons_Scenes_SceneId",
-                table: "SceneChangeButtons",
+                table: "SceneButtons",
                 column: "SceneId",
                 principalTable: "Scenes",
                 principalColumn: "Id",
