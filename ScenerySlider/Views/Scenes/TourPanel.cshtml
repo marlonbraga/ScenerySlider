@@ -1,0 +1,48 @@
+﻿@model ScenerySlider.Models.Scene
+@{
+    Layout = null;
+    ViewBag.Title = "Tour";
+}
+
+<script src="~/Scripts/jquery-3.5.1.js"></script>
+<script>
+    $(document).ready(function () {
+        console.log("Ajax works! Model.id="+@Model.SceneId);
+        $('div.bg-img').css("background-image", "url(@Model.BackgroundLocation)");
+        $('.spot').click(function () {
+            SwitchScene(this.id);
+        });
+        function SwitchScene(id) {
+            $.ajax({
+                url: "/Scenes/TourPanel/" + id,
+                success: function (result) {
+                    $(".bg-img").html(result);
+                }
+            });
+        }
+    });
+</script>
+<script src="~/Scripts/TourFrame/TourDragBackground.js"></script>
+@{
+    using(var context = new ScenerySlider.Data.SceneButtonContext()) {
+        var sceneButton = context.SceneButtons
+            .Where(scene => scene.OwnerSceneId == Model.SceneId)
+            .ToList();
+        for(int i = 0; i < sceneButton.Count(); i++) {
+            <i id="@sceneButton[i].TargetSceneId" style="top:@sceneButton[i].PositionY%; left:@sceneButton[i].PositionX%;" class="spot @sceneButton[i].Icon"></i>
+        }
+    }
+    using(var context = new ScenerySlider.Data.InformationSpotButtonContext()) {
+        var informationButton = context.InformationSpotButtons
+        .Where(scene => scene.SceneId == Model.SceneId)
+        .ToList();
+        for(int i = 0; i < informationButton.Count(); i++) {
+            <a href="@Url.Action("Tour", "Scenes", new { id = informationButton[i].SceneId })">
+                <i style="top:@informationButton[i].PositionY%; left:@informationButton[i].PositionX%;" class="spot @informationButton[i].Icon"></i>
+            </a>
+        }
+    }
+}
+<p>
+    <input type="text" id="data" />
+</p>
