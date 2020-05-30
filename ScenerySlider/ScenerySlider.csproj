@@ -311,6 +311,7 @@
     <Compile Include="Controllers\SceneButtonsController.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\Audios\CalmSpace-pt1.mp3" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-reboot.css" />

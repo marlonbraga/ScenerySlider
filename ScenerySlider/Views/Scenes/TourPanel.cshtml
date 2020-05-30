@@ -7,7 +7,6 @@
 <script src="~/Scripts/jquery-3.5.1.js"></script>
 <script>
     $(document).ready(function () {
-        console.log("Ajax works! Model.id="+@Model.SceneId);
         $('div.bg-img').css("background-image", "url(@Model.BackgroundLocation)");
         $('.spot').click(function () {
             SwitchScene(this.id);
