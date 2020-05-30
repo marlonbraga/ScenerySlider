@@ -3,7 +3,6 @@ using System.ComponentModel.DataAnnotations.Schema;
 using ScenerySlider.Data;
 
 namespace ScenerySlider.Models {
-    [Table("SceneButtons")]
     public class SceneButton : Button {
         [Key()]
         public int Id { get; set; }
@@ -19,7 +18,7 @@ namespace ScenerySlider.Models {
         public override int Rotation { get; set; }
         public void Save() {
             var context = new DatabaseContext();
-            context.SceneChangeButtons.Add(this);
+            context.SceneButtons.Add(this);
             context.SaveChanges();
         }
     }

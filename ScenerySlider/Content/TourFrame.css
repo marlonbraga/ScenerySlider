@@ -1,18 +1,26 @@
 ﻿body {
     overflow-x: hidden;
+    background-color: black;
 }
-
+.navbar-nav > li > a:hover {
+    background-color: #313131;
+}
 div.bg-img {
     background-position: 0 0;
     background-size: auto; /* Definition on 'Scripts/TourFrame/TourDragBackground.js' */
     background-repeat: no-repeat;
-    background-color: #888;
+    background-color: black;
     margin: auto;
-    border: 1px solid #888;
-    border-radius: 25px;
+    border: 1px solid black;
+    border-radius: 15px;
     padding: 0px;
-    box-shadow: 30px 30px 30px white inset, -30px -30px 30px white inset, -30px 30px 30px white inset, 30px -30px 30px white inset;
+    box-shadow: 5px 5px 5px black inset, 5px -5px 5px black inset, -5px 5px 5px black inset, 5px -5px 5px black inset;
 }
+    div.bg-img.light {
+        background-color: white;
+        border: 1px solid white;
+        box-shadow: 5px 5px 5px white inset, 5px -5px 5px white inset, -5px 5px 5px white inset, 5px -5px 5px white inset;
+    }
 
 p, #data {
     text-align: center;
@@ -26,18 +34,23 @@ p, #data {
     font-size: 1.4em;
     border: 1px solid #ddd;
     border-radius: 5px;
+    display:none;
+    
 }
 
 i.spot {
-    font-size: 4vw;
+    font-size: 10vh;
     color: black;
     opacity: 0.25;
-    font-weight: 900;
     position: absolute;
 }
-
     i.spot:hover {
-        color: aqua;
-        opacity: 1;
+        color: #0094FF;
+        text-shadow: 0px 0px 15px #0094FF;
+        opacity: 0.75;
         cursor: pointer;
     }
+
+footer {
+    color: #888;
+}

@@ -15,12 +15,11 @@ namespace ScenerySlider.Models {
         [ForeignKey("Project")]
         public int ProjectId { get; set; }
         public virtual Project Project { get; set; }
-        
+
         [ForeignKey("TargetSceneId")]
         public virtual ICollection<SceneButton> SwitchSceneButton { get; set; }
         [ForeignKey("OwnerSceneId")]
         public virtual ICollection<SceneButton> EntryButton { get; set; }
-        [ForeignKey("SceneId")]
         public virtual ICollection<InformationSpotButton> InformationSpotButton { get; set; }
 
         public void Save() {

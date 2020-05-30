@@ -8,12 +8,13 @@ using System.Web;
 using System.Web.Mvc;
 using ScenerySlider.Data;
 using ScenerySlider.Models;
+using EntityState = System.Data.Entity.EntityState;
 
 namespace ScenerySlider
 {
     public class SceneButtonsController : Controller
     {
-        private SceneButtonContext db = new SceneButtonContext();
+        private InformationSpotButtonContext db = new InformationSpotButtonContext();
 
         // GET: SceneButtons
         public ActionResult Index()

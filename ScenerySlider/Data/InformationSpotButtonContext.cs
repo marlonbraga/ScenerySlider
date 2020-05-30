@@ -19,5 +19,7 @@ namespace ScenerySlider.Data {
 		public System.Data.Entity.DbSet<ScenerySlider.Models.InformationSpotButton> InformationSpotButtons { get; set; }
 		public System.Data.Entity.DbSet<ScenerySlider.Models.InformationSpot> InformationSpots { get; set; }
 		public System.Data.Entity.DbSet<ScenerySlider.Models.Scene> Scenes { get; set; }
+
+		public System.Data.Entity.DbSet<ScenerySlider.Models.SceneButton> SceneButtons { get; set; }
 	}
 }

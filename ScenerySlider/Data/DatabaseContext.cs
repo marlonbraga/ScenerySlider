@@ -5,7 +5,7 @@ namespace ScenerySlider.Data {
 		public DbSet<User> Users { get; set; }
 		public DbSet<Project> Projects { get; set; }
 		public DbSet<Scene> Scenes { get; set; }
-		public DbSet<SceneButton> SceneChangeButtons { get; set; }
+		public DbSet<SceneButton> SceneButtons { get; set; }
 		public DbSet<InformationSpot> InformationSpots { get; set; }
 		public DbSet<InformationSpotButton> InformationSpotButtons { get; set; }
 
