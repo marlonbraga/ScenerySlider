@@ -2,6 +2,7 @@
     overflow-x: hidden;
     background-color: black;
     font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    color: #AAA;
 }
 
 .navbar-nav > li > a:hover {
@@ -24,6 +25,7 @@ div.bg-img {
         background-color: white;
         border: 1px solid white;
         box-shadow: 5px 5px 5px white inset, 5px -5px 5px white inset, -5px 5px 5px white inset, 5px -5px 5px white inset;
+        color: black;
     }
 
 p, #data {
@@ -46,6 +48,7 @@ i.spot {
     color: black;
     opacity: 0.25;
     position: absolute;
+    transition: opacity 0.3s, color 0.3s linear;
 }
 
     i.spot:hover {
@@ -53,6 +56,7 @@ i.spot {
         text-shadow: 0px 0px 15px #0094FF;
         opacity: 0.75;
         cursor: pointer;
+        transition: color 0.3s, opacity 0.3s linear;
     }
 
 footer {
@@ -60,14 +64,12 @@ footer {
 }
 
 div.bg-blur {
-    background-image: url(/Content/Images/Paco-Imperial.jpg);
-    opacity: 0.85;
+    opacity: 0.9;
     background-size: cover;
-    -moz-filter: blur(4px);
-    -o-filter: blur(4px);
-    -ms-filter: blur(4px);
-    filter: blur(4px);
-    -webkit-filter: blur(4px);
+    -moz-filter: blur(30px);
+    -ms-filter: blur(30px);
+    filter: blur(30px);
+    -webkit-filter: blur(30px);
     background-position: 0 0;
     background-repeat: no-repeat;
     margin: auto;
@@ -77,6 +79,8 @@ div.bg-blur {
     position: fixed;
     width: 100%;
     height: 100%;
+    display: none;
+    transition: 0.3s;
 }
 
 div .infomationScreen {
@@ -85,22 +89,22 @@ div .infomationScreen {
     background-image: url("/Content/Images/Home/caderno.jpg");
     background-size: cover;
     color: black;
-    /*opacity: 1;*/
     padding: 5px;
     margin: 10%;
     width: 80%;
     height: 80%;
-    border-radius: 20px;
-    border: 5px solid #0094FF;
-    box-shadow: 0px 0px 25px #0094FF;
+    border-radius: 30px;
+    /*border: 1px solid #0094FF;*/
+    box-shadow: 0px 0px 25px #0094FF, 0px 0px 25px #0094FF inset;
     position: sticky;
     z-index: 1;
+    display: none;
 }
 
     div.infomationScreen > i.close {
-        top: 0%;
-        left: 100%;
-        position: inherit;
+        top: 3%;
+        left: 3%;
+        position: initial;
         font-size: 4vh;
     }
 

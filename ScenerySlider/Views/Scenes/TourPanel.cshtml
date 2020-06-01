@@ -8,11 +8,14 @@
 <script>
     $(document).ready(function () {
         $('div.bg-img').css("background-image", "url(@Model.BackgroundLocation)");
-        $('.spot').click(function () {
+        $('.switch').click(function () {
             SwitchScene(this.id);
         });
         $('.close').click(function () {
-            ShowContent(this.id);
+            ShowContent();
+        });
+        $('.open').click(function () {
+            ShowContent();
         });
         function SwitchScene(id) {
             $.ajax({
@@ -22,17 +25,25 @@
                 }
             });
         }
-        function ShowContent(id) {
-            $(".infomationScreen").css("display", "none");
-            $(".bg-blur").css("display", "none");
-            $(".bg-blur").css("background-image", "url(@Model.BackgroundLocation)");
+        function ShowContent() {
+            if ($(".infomationScreen").css("display") === "none") {
+                $(".bg-blur").css("background-image", "url(@Model.BackgroundLocation)");
+                $(".bg-blur").css("display", "block");
+                $(".infomationScreen").css("display", "block");
+            } else {
+                $(".infomationScreen").css("display", "none");
+                $(".bg-blur").css("display", "none");
+                opacity: 0.9;
+            }
         }
     });
 </script>
 <script src="~/Scripts/TourFrame/TourDragBackground.js"></script>
 <div class="bg-blur"></div>
 @{ using(var context = new ScenerySlider.Data.SceneButtonContext()) {
-        var sceneButton = context.SceneButtons.Where(scene => scene.OwnerSceneId == Model.SceneId).ToList(); for(int i = 0; i < sceneButton.Count(); i++) { <i id="@sceneButton[i].TargetSceneId" style="top:@sceneButton[i].PositionY%; left:@sceneButton[i].PositionX%;" class="spot @sceneButton[i].Icon"></i>
+        var sceneButton = context.SceneButtons.Where(scene => scene.OwnerSceneId == Model.SceneId).ToList();
+        for(int i = 0; i < sceneButton.Count(); i++) {
+            <i id="@sceneButton[i].TargetSceneId" style="top:@sceneButton[i].PositionY%; left:@sceneButton[i].PositionX%;" class="switch spot @sceneButton[i].Icon"></i>
         }
     }
     using(var context = new ScenerySlider.Data.InformationSpotButtonContext()) {
@@ -40,9 +51,7 @@
         .Where(scene => scene.SceneId == Model.SceneId)
         .ToList();
         for(int i = 0; i < informationButton.Count(); i++) {
-            <a href="@Url.Action("Tour", "Scenes", new { id = informationButton[i].SceneId })">
-                <i style="top:@informationButton[i].PositionY%; left:@informationButton[i].PositionX%;" class="spot @informationButton[i].Icon"></i>
-            </a>
+            <i id="@informationButton[i].SceneId" style="top:@informationButton[i].PositionY%; left:@informationButton[i].PositionX%;" class="open spot fas fa-eye @informationButton[i].Icon"></i>
         }
     }
     <div class="infomationScreen">

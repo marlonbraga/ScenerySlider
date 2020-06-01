@@ -319,7 +319,8 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\font-awesome.css" />
-    <Content Include="Content\Images\Home\armário-cozinha.jpg" />
+    <Content Include="Content\Images\Home\area-de-trabalho.jpg" />
+    <Content Include="Content\Images\Home\armario-cozinha.jpg" />
     <Content Include="Content\Images\Home\caderno.jpg" />
     <Content Include="Content\Images\Home\computador.jpg" />
     <Content Include="Content\Images\Home\congelador.jpg" />
@@ -327,9 +328,8 @@
     <Content Include="Content\Images\Home\cozinha.jpg" />
     <Content Include="Content\Images\Home\estante.jpg" />
     <Content Include="Content\Images\Home\geladeira.jpg" />
-    <Content Include="Content\Images\Home\placa de café.jpg" />
+    <Content Include="Content\Images\Home\placa de cafe.jpg" />
     <Content Include="Content\Images\Home\sala.jpg" />
-    <Content Include="Content\Images\Home\área-de-trabalho.jpg" />
     <Content Include="Content\Images\Paco-Imperial-Interior.jpg" />
     <Content Include="Content\Images\Paco-Imperial.jpg" />
     <Content Include="Content\TourFrame.css" />
