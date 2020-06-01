@@ -1,10 +1,13 @@
 ﻿body {
     overflow-x: hidden;
     background-color: black;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 }
+
 .navbar-nav > li > a:hover {
     background-color: #313131;
 }
+
 div.bg-img {
     background-position: 0 0;
     background-size: auto; /* Definition on 'Scripts/TourFrame/TourDragBackground.js' */
@@ -16,6 +19,7 @@ div.bg-img {
     padding: 0px;
     box-shadow: 5px 5px 5px black inset, 5px -5px 5px black inset, -5px 5px 5px black inset, 5px -5px 5px black inset;
 }
+
     div.bg-img.light {
         background-color: white;
         border: 1px solid white;
@@ -34,8 +38,7 @@ p, #data {
     font-size: 1.4em;
     border: 1px solid #ddd;
     border-radius: 5px;
-    display:none;
-    
+    display: none;
 }
 
 i.spot {
@@ -44,6 +47,7 @@ i.spot {
     opacity: 0.25;
     position: absolute;
 }
+
     i.spot:hover {
         color: #0094FF;
         text-shadow: 0px 0px 15px #0094FF;
@@ -53,4 +57,53 @@ i.spot {
 
 footer {
     color: #888;
+}
+
+div.bg-blur {
+    background-image: url(/Content/Images/Paco-Imperial.jpg);
+    opacity: 0.85;
+    background-size: cover;
+    -moz-filter: blur(4px);
+    -o-filter: blur(4px);
+    -ms-filter: blur(4px);
+    filter: blur(4px);
+    -webkit-filter: blur(4px);
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    margin: auto;
+    border-radius: 15px;
+    padding: 0px;
+    z-index: 0;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}
+
+div .infomationScreen {
+    font-size: 4vh;
+    background: white;
+    background-image: url("/Content/Images/Home/caderno.jpg");
+    background-size: cover;
+    color: black;
+    /*opacity: 1;*/
+    padding: 5px;
+    margin: 10%;
+    width: 80%;
+    height: 80%;
+    border-radius: 20px;
+    border: 5px solid #0094FF;
+    box-shadow: 0px 0px 25px #0094FF;
+    position: sticky;
+    z-index: 1;
+}
+
+    div.infomationScreen > i.close {
+        top: 0%;
+        left: 100%;
+        position: inherit;
+        font-size: 4vh;
+    }
+
+.hide {
+    display: none;
 }

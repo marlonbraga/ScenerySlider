@@ -11,6 +11,9 @@
         $('.spot').click(function () {
             SwitchScene(this.id);
         });
+        $('.close').click(function () {
+            ShowContent(this.id);
+        });
         function SwitchScene(id) {
             $.ajax({
                 url: "/Scenes/TourPanel/" + id,
@@ -19,16 +22,17 @@
                 }
             });
         }
+        function ShowContent(id) {
+            $(".infomationScreen").css("display", "none");
+            $(".bg-blur").css("display", "none");
+            $(".bg-blur").css("background-image", "url(@Model.BackgroundLocation)");
+        }
     });
 </script>
 <script src="~/Scripts/TourFrame/TourDragBackground.js"></script>
-@{
-    using(var context = new ScenerySlider.Data.SceneButtonContext()) {
-        var sceneButton = context.SceneButtons
-            .Where(scene => scene.OwnerSceneId == Model.SceneId)
-            .ToList();
-        for(int i = 0; i < sceneButton.Count(); i++) {
-            <i id="@sceneButton[i].TargetSceneId" style="top:@sceneButton[i].PositionY%; left:@sceneButton[i].PositionX%;" class="spot @sceneButton[i].Icon"></i>
+<div class="bg-blur"></div>
+@{ using(var context = new ScenerySlider.Data.SceneButtonContext()) {
+        var sceneButton = context.SceneButtons.Where(scene => scene.OwnerSceneId == Model.SceneId).ToList(); for(int i = 0; i < sceneButton.Count(); i++) { <i id="@sceneButton[i].TargetSceneId" style="top:@sceneButton[i].PositionY%; left:@sceneButton[i].PositionX%;" class="spot @sceneButton[i].Icon"></i>
         }
     }
     using(var context = new ScenerySlider.Data.InformationSpotButtonContext()) {
@@ -41,7 +45,19 @@
             </a>
         }
     }
+    <div class="infomationScreen">
+        <i class="close spot fas fa-reply fa-flip-vertical"></i>
+
+        <p>
+            <strong>@Model.Name</strong>
+        </p>
+        <p>
+            @Model.Description
+        </p>
+    </div>
 }
+
+
 <p>
     <input type="text" id="data" />
 </p>
