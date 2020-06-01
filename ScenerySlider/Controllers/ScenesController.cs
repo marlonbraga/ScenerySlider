@@ -51,6 +51,20 @@ namespace ScenerySlider
             }
             return View(scene);
         }
+        // GET: Scenes/TourPanel/9
+        public ActionResult TourPanel(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Scene scene = db.Scenes.Find(id);
+            if (scene == null)
+            {
+                return HttpNotFound();
+            }
+            return View(scene);
+        }
 
         // GET: Scenes/Create
         public ActionResult Create()
