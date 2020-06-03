@@ -66,6 +66,7 @@ footer {
 div.bg-blur {
     opacity: 0.9;
     background-size: cover;
+    background: rgba(0,0,0,0.7);
     -moz-filter: blur(30px);
     -ms-filter: blur(30px);
     filter: blur(30px);
@@ -84,17 +85,15 @@ div.bg-blur {
 }
 
 div .infomationScreen {
-    font-size: 4vh;
     background: white;
-    background-image: url("/Content/Images/Home/caderno.jpg");
+    background: rgba(0,0,0,0.7);
     background-size: cover;
-    color: black;
+    color: white;
     padding: 5px;
     margin: 10%;
     width: 80%;
     height: 80%;
     border-radius: 30px;
-    /*border: 1px solid #0094FF;*/
     box-shadow: 0px 0px 25px #0094FF, 0px 0px 25px #0094FF inset;
     position: sticky;
     z-index: 1;
@@ -102,12 +101,50 @@ div .infomationScreen {
 }
 
     div.infomationScreen > i.close {
-        top: 3%;
-        left: 3%;
-        position: initial;
-        font-size: 4vh;
+        top: 1%;
+        left: 94%;
+        position: absolute;
+        font-size: 6vh;
     }
+
+    div.infomationScreen > .infomation-box {
+        background-color: rgba(0,0,0,0.7);
+        font-weight: 100;
+        width: 90%;
+        margin: auto;
+        padding: 10px;
+        border-radius: 15px;
+        box-shadow: 0px 0px 8px rgba(0,0,0,0.5);
+        opacity: 0;
+        animation: fade-in-out 13s 1;
+        -webkit-animation: fade-in-out 13s 1;
+    }
+        div.infomationScreen > .infomation-box:hover {
+            opacity: 1;
+        }
+
+p.infomation-Title {
+    font-size: 3.5vh;
+}
+
+p.infomation-Description {
+    font-size: 2vh;
+}
 
 .hide {
     display: none;
+}
+
+@keyframes fade-in-out {
+  0%  {opacity:0;}
+  20% {opacity:1;}
+  80% {opacity:1;}
+  100%{opacity:0;}
+}
+
+@-webkit-keyframes fade-in-out {
+  0%  {opacity:0;}
+  20% {opacity:1;}
+  80% {opacity:1;}
+  100%{opacity:0;}
 }
