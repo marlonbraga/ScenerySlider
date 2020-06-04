@@ -42,7 +42,7 @@
         var audio = new Audio('/Content/Audios/CalmSpace-pt1.mp3');
         $('i.start').click(function () {
             audio.play();
-            SwitchScene(9);
+            SwitchScene(11);//TODO: Get id by URL parameter
         });
     });
 </script>
@@ -51,11 +51,7 @@
         <i class="startText far fa-stack-2x">START</i>
         <i class="start spot far fa-circle fa-stack-2x"></i>
     </span>
-
-
-    @*<button class="start btn btn-lg btn-primary">START</button>*@
 </div>
 <p>
-
     <input type="text" id="data" />
 </p>

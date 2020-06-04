@@ -1,10 +1,14 @@
 ﻿body {
     overflow-x: hidden;
     background-color: black;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    color: #AAA;
 }
+
 .navbar-nav > li > a:hover {
     background-color: #313131;
 }
+
 div.bg-img {
     background-position: 0 0;
     background-size: auto; /* Definition on 'Scripts/TourFrame/TourDragBackground.js' */
@@ -16,10 +20,12 @@ div.bg-img {
     padding: 0px;
     box-shadow: 5px 5px 5px black inset, 5px -5px 5px black inset, -5px 5px 5px black inset, 5px -5px 5px black inset;
 }
+
     div.bg-img.light {
         background-color: white;
         border: 1px solid white;
         box-shadow: 5px 5px 5px white inset, 5px -5px 5px white inset, -5px 5px 5px white inset, 5px -5px 5px white inset;
+        color: black;
     }
 
 p, #data {
@@ -34,8 +40,7 @@ p, #data {
     font-size: 1.4em;
     border: 1px solid #ddd;
     border-radius: 5px;
-    display:none;
-    
+    display: none;
 }
 
 i.spot {
@@ -43,14 +48,103 @@ i.spot {
     color: black;
     opacity: 0.25;
     position: absolute;
+    transition: opacity 0.3s, color 0.3s linear;
 }
+
     i.spot:hover {
         color: #0094FF;
         text-shadow: 0px 0px 15px #0094FF;
         opacity: 0.75;
         cursor: pointer;
+        transition: color 0.3s, opacity 0.3s linear;
     }
 
 footer {
     color: #888;
+}
+
+div.bg-blur {
+    opacity: 0.9;
+    background-size: cover;
+    background: rgba(0,0,0,0.7);
+    -moz-filter: blur(30px);
+    -ms-filter: blur(30px);
+    filter: blur(30px);
+    -webkit-filter: blur(30px);
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    margin: auto;
+    border-radius: 15px;
+    padding: 0px;
+    z-index: 0;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    display: none;
+    transition: 0.3s;
+}
+
+div .infomationScreen {
+    background: white;
+    background: rgba(0,0,0,0.7);
+    background-size: cover;
+    color: white;
+    padding: 5px;
+    margin: 10%;
+    width: 80%;
+    height: 80%;
+    border-radius: 30px;
+    box-shadow: 0px 0px 25px #0094FF, 0px 0px 25px #0094FF inset;
+    position: sticky;
+    z-index: 1;
+    display: none;
+}
+
+    div.infomationScreen > i.close {
+        top: 1%;
+        left: 94%;
+        position: absolute;
+        font-size: 6vh;
+    }
+
+    div.infomationScreen > .infomation-box {
+        background-color: rgba(0,0,0,0.7);
+        font-weight: 100;
+        width: 90%;
+        margin: auto;
+        padding: 10px;
+        border-radius: 15px;
+        box-shadow: 0px 0px 8px rgba(0,0,0,0.5);
+        opacity: 0;
+        animation: fade-in-out 13s 1;
+        -webkit-animation: fade-in-out 13s 1;
+    }
+        div.infomationScreen > .infomation-box:hover {
+            opacity: 1;
+        }
+
+p.infomation-Title {
+    font-size: 3.5vh;
+}
+
+p.infomation-Description {
+    font-size: 2vh;
+}
+
+.hide {
+    display: none;
+}
+
+@keyframes fade-in-out {
+  0%  {opacity:0;}
+  20% {opacity:1;}
+  80% {opacity:1;}
+  100%{opacity:0;}
+}
+
+@-webkit-keyframes fade-in-out {
+  0%  {opacity:0;}
+  20% {opacity:1;}
+  80% {opacity:1;}
+  100%{opacity:0;}
 }
