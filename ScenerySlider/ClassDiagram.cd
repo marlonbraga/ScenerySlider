@@ -1,105 +1,252 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="ScenerySlider.BundleConfig" Collapsed="true">
-    <Position X="9.75" Y="0.5" Width="1.5" />
+    <Position X="14.5" Y="3.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAA=</HashCode>
+      <HashCode>ACAQAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAA=</HashCode>
       <FileName>App_Start\BundleConfig.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ScenerySlider.FilterConfig" Collapsed="true">
-    <Position X="11.5" Y="0.5" Width="1.5" />
+    <Position X="14.5" Y="4" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAA=</HashCode>
       <FileName>App_Start\FilterConfig.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ScenerySlider.RouteConfig" Collapsed="true">
-    <Position X="13.25" Y="1.5" Width="1.5" />
+    <Position X="14.5" Y="4.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAA=</HashCode>
       <FileName>App_Start\RouteConfig.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ScenerySlider.MvcApplication" Collapsed="true">
-    <Position X="9.75" Y="1.5" Width="1.5" />
+    <Position X="14.5" Y="2.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAA=</HashCode>
       <FileName>Global.asax.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ScenerySlider.ImageSpot">
-    <Position X="10" Y="7" Width="1.5" />
+    <Position X="6.25" Y="7" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAACAAAA=</HashCode>
       <FileName>Models\ImageSpot.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ScenerySlider.TextSpot">
-    <Position X="11.75" Y="7" Width="1.5" />
+    <Position X="8" Y="7" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAACAAAA=</HashCode>
       <FileName>Models\TextSpot.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ScenerySlider.VideoSpot">
-    <Position X="13.5" Y="7" Width="1.5" />
+    <Position X="9.75" Y="7" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAACAAAA=</HashCode>
       <FileName>Models\VideoSpot.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ScenerySlider.Controllers.HomeController" Collapsed="true">
-    <Position X="13.25" Y="0.5" Width="1.5" />
+    <Position X="11.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAEACAAAAAAAAAAAAAAAAAEAAAAAAAA=</HashCode>
       <FileName>Controllers\HomeController.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ScenerySlider.Models.InformationSpotButton" BaseTypeListCollapsed="true">
-    <Position X="3.75" Y="5.75" Width="2.25" />
+    <Position X="3.25" Y="6.25" Width="2.25" />
     <TypeIdentifier>
-      <HashCode>AAACEIAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAACAIAAAAAACIAwgAAAAAAAAAAAAAACAAAAAAAAAAA=</HashCode>
       <FileName>Models\InformationSpotButton.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ScenerySlider.Models.Project">
     <Position X="2.25" Y="0.5" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>AAADAIAAAAAAAAAAAAAAAAgAAAEAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAADAIAAAAAAAAAAAAAAAAwAAAEAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Models\Project.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ScenerySlider.Models.Scene">
     <Position X="4.25" Y="0.5" Width="2.5" />
     <TypeIdentifier>
-      <HashCode>AAACAIAAAAAAAAAAAAAACAAABAAAAAAQAAAAAAAAEAA=</HashCode>
+      <HashCode>AAAAAIAAAAAgCABCAAAACAQABAAAAAAAAAACAAAAAAA=</HashCode>
       <FileName>Models\Scene.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ScenerySlider.Models.SceneChangeButton" BaseTypeListCollapsed="true">
-    <Position X="1.25" Y="5.75" Width="2.25" />
+    <Position X="0.5" Y="6.25" Width="2.25" />
     <TypeIdentifier>
-      <HashCode>AAACAIAAAAAAAACAAAAAABAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAACAIAAAAAACIAggAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Models\SceneChangeButton.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ScenerySlider.Models.User">
     <Position X="0.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAACAKCAAAAAAAAAAAAAAAAAAAAAAAACAAAQAAAAAAI=</HashCode>
+      <HashCode>AAACAKCAAAAAAAAAAAAAAAQAAAAAAAACAAAQAAAAAAI=</HashCode>
       <FileName>Models\User.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ScenerySlider.Models.InformationSpot">
-    <Position X="10.75" Y="3.5" Width="1.75" />
+    <Position X="7" Y="3.75" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAACAIAAAAAgIAAAAAAAACQAAAAAAAAAAAAAAACAAAA=</HashCode>
       <FileName>Models\InformationSpot.cs</FileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="ScenerySlider.AudioSpot">
+    <Position X="11.5" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAACAAAA=</HashCode>
+      <FileName>Models\AudioSpot.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScenerySlider.Data.DatabaseContext" Collapsed="true">
+    <Position X="9.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAEAQAAAABAgAAAAAAAAAQAAAAAAAAAAAAAAQA=</HashCode>
+      <FileName>Data\DatabaseContext.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScenerySlider.Data.InformationSpotButtonContext" Collapsed="true">
+    <Position X="8.75" Y="1.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAAAAAAgAAAAAAAAAQAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Data\InformationSpotButtonContext.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScenerySlider.Data.InformationSpotContext" Collapsed="true">
+    <Position X="9.25" Y="2.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Data\InformationSpotContext.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScenerySlider.Data.ProjectContext" Collapsed="true">
+    <Position X="9.75" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQA=</HashCode>
+      <FileName>Data\ProjectContext.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScenerySlider.Data.SceneChangeButtonContext" Collapsed="true">
+    <Position X="9" Y="2" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABAgAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Data\SceneChangeButtonContext.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScenerySlider.Data.UserContext" Collapsed="true">
+    <Position X="9.75" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQA=</HashCode>
+      <FileName>Data\UserContext.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScenerySlider.Migrations.Initial" Collapsed="true">
+    <Position X="14.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAI=</HashCode>
+      <FileName>Migrations\20200425003451_Initial.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScenerySlider.Migrations.UpdateUserTable" Collapsed="true">
+    <Position X="14.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAI=</HashCode>
+      <FileName>Migrations\20200425022908_UpdateUserTable.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScenerySlider.Migrations.UpdateButtonSuperClass" Collapsed="true">
+    <Position X="14" Y="7" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAI=</HashCode>
+      <FileName>Migrations\20200425143420_UpdateButtonSuperClass.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScenerySlider.Migrations.UpdateSceneChangeButton_id" Collapsed="true">
+    <Position X="14" Y="6.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAI=</HashCode>
+      <FileName>Migrations\20200425153011_UpdateSceneChangeButton_id.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScenerySlider.Migrations.NotMapping" Collapsed="true">
+    <Position X="14.5" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAI=</HashCode>
+      <FileName>Migrations\20200425173221_NotMapping.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScenerySlider.Migrations.DatabaseContextModelSnapshot" Collapsed="true">
+    <Position X="14" Y="5.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAA=</HashCode>
+      <FileName>Migrations\DatabaseContextModelSnapshot.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScenerySlider.Models.Button" Collapsed="true">
+    <Position X="2.25" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAIAgAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Button.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScenerySlider.InformationSpotsController" Collapsed="true">
+    <Position X="11.5" Y="2.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACARAACAAAAAAAAAAAEAAEACAAEAAAAAAAA=</HashCode>
+      <FileName>Controllers\InformationSpotsController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScenerySlider.UsersController" Collapsed="true">
+    <Position X="11.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACARAACAAAAAAAAAAAEAAEACAAEAAAAAAAA=</HashCode>
+      <FileName>Controllers\UsersController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScenerySlider.ProjectsController" Collapsed="true">
+    <Position X="11.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACARAACAAAAAAAAAAAEAAEACAAEAAAAAAAA=</HashCode>
+      <FileName>Controllers\ProjectsController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScenerySlider.SceneChangeButtonsController" Collapsed="true">
+    <Position X="11.5" Y="2" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACARAACAAAAAAAAAAAEAAEACAAEAAAAAAAA=</HashCode>
+      <FileName>Controllers\SceneChangeButtonsController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScenerySlider.InformationSpotButtonsController" Collapsed="true">
+    <Position X="11.5" Y="1.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACARAACAAAAAAAAAAAEAAEACAAEAAAAAAAA=</HashCode>
+      <FileName>Controllers\InformationSpotButtonsController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScenerySlider.ScenesController" Collapsed="true">
+    <Position X="11.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACARAACAAAAAAAAAAAEAAEACAAEAAAAAAAA=</HashCode>
+      <FileName>ScenesController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScenerySlider.Data.SceneContext" Collapsed="true">
+    <Position X="9.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAQA=</HashCode>
+      <FileName>Data\SceneContext.cs</FileName>
+    </TypeIdentifier>
+  </Class>
   <Interface Name="ScenerySlider.IButton">
-    <Position X="2.75" Y="4" Width="1.5" />
+    <Position X="2.25" Y="3.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Models\IButton.cs</FileName>

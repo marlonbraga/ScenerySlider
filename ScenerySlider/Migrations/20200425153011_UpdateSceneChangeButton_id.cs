@@ -8,30 +8,30 @@ namespace ScenerySlider.Migrations
         {
             migrationBuilder.DropForeignKey(
                 name: "FK_SceneChangeButtons_Scenes_SceneDestinationId",
-                table: "SceneChangeButtons");
+                table: "SceneButtons");
 
             migrationBuilder.DropIndex(
                 name: "IX_SceneChangeButtons_SceneDestinationId",
-                table: "SceneChangeButtons");
+                table: "SceneButtons");
 
             migrationBuilder.DropColumn(
                 name: "SceneDestinationId",
-                table: "SceneChangeButtons");
+                table: "SceneButtons");
 
             migrationBuilder.AddColumn<int>(
                 name: "SceneId",
-                table: "SceneChangeButtons",
+                table: "SceneButtons",
                 nullable: false,
                 defaultValue: 0);
 
             migrationBuilder.CreateIndex(
                 name: "IX_SceneChangeButtons_SceneId",
-                table: "SceneChangeButtons",
+                table: "SceneButtons",
                 column: "SceneId");
 
             migrationBuilder.AddForeignKey(
                 name: "FK_SceneChangeButtons_Scenes_SceneId",
-                table: "SceneChangeButtons",
+                table: "SceneButtons",
                 column: "SceneId",
                 principalTable: "Scenes",
                 principalColumn: "Id",
@@ -42,31 +42,31 @@ namespace ScenerySlider.Migrations
         {
             migrationBuilder.DropForeignKey(
                 name: "FK_SceneChangeButtons_Scenes_SceneId",
-                table: "SceneChangeButtons");
+                table: "SceneButtons");
 
             migrationBuilder.DropIndex(
                 name: "IX_SceneChangeButtons_SceneId",
-                table: "SceneChangeButtons");
+                table: "SceneButtons");
 
             migrationBuilder.DropColumn(
                 name: "SceneId",
-                table: "SceneChangeButtons");
+                table: "SceneButtons");
 
             migrationBuilder.AddColumn<int>(
                 name: "SceneDestinationId",
-                table: "SceneChangeButtons",
+                table: "SceneButtons",
                 type: "int",
                 nullable: false,
                 defaultValue: 0);
 
             migrationBuilder.CreateIndex(
                 name: "IX_SceneChangeButtons_SceneDestinationId",
-                table: "SceneChangeButtons",
+                table: "SceneButtons",
                 column: "SceneDestinationId");
 
             migrationBuilder.AddForeignKey(
                 name: "FK_SceneChangeButtons_Scenes_SceneDestinationId",
-                table: "SceneChangeButtons",
+                table: "SceneButtons",
                 column: "SceneDestinationId",
                 principalTable: "Scenes",
                 principalColumn: "Id",

@@ -20,13 +20,13 @@ namespace ScenerySlider.Migrations
 
             migrationBuilder.AddColumn<int>(
                 name: "PositionX",
-                table: "SceneChangeButtons",
+                table: "SceneButtons",
                 nullable: false,
                 defaultValue: 0);
 
             migrationBuilder.AddColumn<int>(
                 name: "PositionY",
-                table: "SceneChangeButtons",
+                table: "SceneButtons",
                 nullable: false,
                 defaultValue: 0);
 
@@ -74,11 +74,11 @@ namespace ScenerySlider.Migrations
 
             migrationBuilder.DropColumn(
                 name: "PositionX",
-                table: "SceneChangeButtons");
+                table: "SceneButtons");
 
             migrationBuilder.DropColumn(
                 name: "PositionY",
-                table: "SceneChangeButtons");
+                table: "SceneButtons");
 
             migrationBuilder.DropColumn(
                 name: "InformationSpotId",

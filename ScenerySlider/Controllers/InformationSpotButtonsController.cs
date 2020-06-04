@@ -8,6 +8,7 @@ using System.Web;
 using System.Web.Mvc;
 using ScenerySlider.Data;
 using ScenerySlider.Models;
+using EntityState = System.Data.Entity.EntityState;
 
 namespace ScenerySlider
 {
@@ -18,7 +19,7 @@ namespace ScenerySlider
         // GET: InformationSpotButtons
         public ActionResult Index()
         {
-            var informationSpotButtons = db.InformationSpotButtons.Include(i => i.InformationSpot);
+            var informationSpotButtons = db.InformationSpotButtons.Include(i => i.InformationSpot).Include(i => i.Scene);
             return View(informationSpotButtons.ToList());
         }
 
@@ -41,6 +42,7 @@ namespace ScenerySlider
         public ActionResult Create()
         {
             ViewBag.InformationSpotId = new SelectList(db.InformationSpots, "Id", "Name");
+            ViewBag.SceneId = new SelectList(db.Scenes, "SceneId", "Name");
             return View();
         }
 
@@ -49,7 +51,7 @@ namespace ScenerySlider
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,InformationSpotId,PositionX,PositionY")] InformationSpotButton informationSpotButton)
+        public ActionResult Create([Bind(Include = "Id,SceneId,InformationSpotId,PositionX,PositionY,Rotation")] InformationSpotButton informationSpotButton)
         {
             if (ModelState.IsValid)
             {
@@ -59,6 +61,7 @@ namespace ScenerySlider
             }
 
             ViewBag.InformationSpotId = new SelectList(db.InformationSpots, "Id", "Name", informationSpotButton.InformationSpotId);
+            ViewBag.SceneId = new SelectList(db.Scenes, "SceneId", "Name", informationSpotButton.SceneId);
             return View(informationSpotButton);
         }
 
@@ -75,6 +78,7 @@ namespace ScenerySlider
                 return HttpNotFound();
             }
             ViewBag.InformationSpotId = new SelectList(db.InformationSpots, "Id", "Name", informationSpotButton.InformationSpotId);
+            ViewBag.SceneId = new SelectList(db.Scenes, "SceneId", "Name", informationSpotButton.SceneId);
             return View(informationSpotButton);
         }
 
@@ -83,15 +87,16 @@ namespace ScenerySlider
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,InformationSpotId,PositionX,PositionY")] InformationSpotButton informationSpotButton)
+        public ActionResult Edit([Bind(Include = "Id,SceneId,InformationSpotId,PositionX,PositionY,Rotation")] InformationSpotButton informationSpotButton)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(informationSpotButton).State = System.Data.Entity.EntityState.Modified;
+                db.Entry(informationSpotButton).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
             ViewBag.InformationSpotId = new SelectList(db.InformationSpots, "Id", "Name", informationSpotButton.InformationSpotId);
+            ViewBag.SceneId = new SelectList(db.Scenes, "SceneId", "Name", informationSpotButton.SceneId);
             return View(informationSpotButton);
         }
 

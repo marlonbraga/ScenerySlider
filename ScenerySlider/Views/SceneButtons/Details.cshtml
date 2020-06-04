@@ -1,0 +1,66 @@
+﻿@model ScenerySlider.Models.SceneButton
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>SceneButton</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.OwnerScene.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OwnerScene.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TargetScene.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TargetScene.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Icon)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Icon)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PositionX)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PositionX)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PositionY)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PositionY)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Rotation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Rotation)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

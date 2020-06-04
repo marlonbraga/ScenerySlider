@@ -100,7 +100,7 @@ namespace ScenerySlider.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "SceneChangeButtons",
+                name: "SceneButtons",
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
@@ -130,7 +130,7 @@ namespace ScenerySlider.Migrations
 
             migrationBuilder.CreateIndex(
                 name: "IX_SceneChangeButtons_SceneDestinationId",
-                table: "SceneChangeButtons",
+                table: "SceneButtons",
                 column: "SceneDestinationId");
 
             migrationBuilder.CreateIndex(
@@ -147,7 +147,7 @@ namespace ScenerySlider.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "SceneChangeButtons");
+                name: "SceneButtons");
 
             migrationBuilder.DropTable(
                 name: "Scenes");

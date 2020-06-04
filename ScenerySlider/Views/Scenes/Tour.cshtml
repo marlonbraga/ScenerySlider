@@ -1,0 +1,57 @@
+﻿@model ScenerySlider.Models.Scene
+
+@{
+    ViewBag.Title = "Tour";
+}
+<style>
+    span.start {
+        margin-top: 30%;
+        margin-right: 50%;
+        margin-left: 45%;
+        padding-top: 20px;
+        padding-right: 50px;
+        padding-bottom: 20px;
+        padding-left: 50px;
+        border-radius: 20px;
+        font-size: 50px;
+        color: white;
+    }
+    i.start {
+        font-size: 20vh;
+        margin-top: -9vh;
+        margin-left: -2vh;
+    }
+    .startText {
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 700;
+        text-shadow: 0px 0px 15px #0094FF;
+        font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    }
+</style>
+<script>
+    $(document).ready(function () {
+        function SwitchScene(id) {
+            $.ajax({
+                url: "/Scenes/TourPanel/" + id,
+                success: function (result) {
+                    $(".bg-img").html(result);
+                }
+            });
+        }
+        var audio = new Audio('/Content/Audios/CalmSpace-pt1.mp3');
+        $('i.start').click(function () {
+            audio.play();
+            SwitchScene(11);//TODO: Get id by URL parameter
+        });
+    });
+</script>
+<div class="bg-img">
+    <span class="start fa-stack fa-lg">
+        <i class="startText far fa-stack-2x">START</i>
+        <i class="start spot far fa-circle fa-stack-2x"></i>
+    </span>
+</div>
+<p>
+    <input type="text" id="data" />
+</p>

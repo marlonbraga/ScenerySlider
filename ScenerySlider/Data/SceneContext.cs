@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using ScenerySlider.Models;
 using System.Data.Entity;
-using System.Linq;
-using System.Web;
 
-namespace ScenerySlider.Data
-{
+namespace ScenerySlider.Data {
     public class SceneContext : DbContext
     {
         // You can add custom code to this file. Changes will not be overwritten.
@@ -18,11 +14,18 @@ namespace ScenerySlider.Data
         public SceneContext() : base("name=ScenerySlider")
         {
         }
-
         public System.Data.Entity.DbSet<ScenerySlider.Models.Scene> Scenes { get; set; }
-
-        public System.Data.Entity.DbSet<ScenerySlider.Models.InformationSpotButton> InformationSpotButtons { get; set; }
-
         public System.Data.Entity.DbSet<ScenerySlider.Models.Project> Projects { get; set; }
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder) {
+            modelBuilder.Entity<Scene>()
+                .HasMany<SceneButton>(button => button.SwitchSceneButton)
+                .WithRequired(scene => scene.TargetScene)
+                .HasForeignKey(button => button.TargetSceneId);
+            modelBuilder.Entity<Scene>()
+                .HasMany<SceneButton>(button => button.EntryButton)
+                .WithRequired(scene => scene.OwnerScene)
+                .HasForeignKey(button => button.OwnerSceneId);
+        }
     }
 }

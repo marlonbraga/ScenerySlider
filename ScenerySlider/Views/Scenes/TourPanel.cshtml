@@ -1,0 +1,78 @@
+﻿@model ScenerySlider.Models.Scene
+@{
+    Layout = null;
+    ViewBag.Title = "Tour";
+}
+
+<script src="~/Scripts/jquery-3.5.1.js"></script>
+<script>
+    $(document).ready(function () {
+        $('div.bg-img').css("background-image", "url(@Model.BackgroundLocation)");
+        $('.switch').click(function () {
+            SwitchScene(this.id);
+        });
+        $('.close').click(function () {
+            ShowContent();
+        });
+        $('.open').click(function () {
+            ShowContent();
+        });
+        function SwitchScene(id) {
+            $.ajax({
+                url: "/Scenes/TourPanel/" + id,
+                success: function (result) {
+                    $(".bg-img").html(result);
+                }
+            });
+        }
+        function ShowContent(bg) {
+            if ($(".infomationScreen").css("display") === "none") {
+                $(".bg-blur").css("background-image", "url(@Model.BackgroundLocation)");
+                $(".bg-blur").css("display", "block");
+                $(".infomationScreen").css("display", "block");
+            } else {
+                $(".infomationScreen").css("display", "none");
+                $(".bg-blur").css("display", "none");
+                opacity: 0.9;
+            }
+        }
+    });
+    function doStuffs(name, description, fileLocate) {
+        $(".infomationScreen").css("background-image", "url("+fileLocate+")");
+        $(".infomation-Title").html(name);
+        $(".infomation-Description").html(description);
+    }
+</script>
+<script src="~/Scripts/TourFrame/TourDragBackground.js"></script>
+<div class="bg-blur"></div>
+@{ using(var context = new ScenerySlider.Data.SceneButtonContext()) {
+        var sceneButton = context.SceneButtons.Where(scene => scene.OwnerSceneId == Model.SceneId).ToList();
+        for(int i = 0; i < sceneButton.Count(); i++) {
+            <i id="@sceneButton[i].TargetSceneId" style="top:@sceneButton[i].PositionY%; left:@sceneButton[i].PositionX%;" class="switch spot @sceneButton[i].Icon"></i>
+        }
+    }
+    using(var context = new ScenerySlider.Data.InformationSpotButtonContext()) {
+        var informationButton = context.InformationSpotButtons
+        .Where(scene => scene.SceneId == Model.SceneId)
+        .ToList();
+        for(int i = 0; i < informationButton.Count(); i++) {
+            <i onclick="doStuffs('@informationButton[i].InformationSpot.Name',
+    '@informationButton[i].InformationSpot.Description',
+    '@informationButton[i].InformationSpot.FileLocate')"
+               id="@informationButton[i].InformationSpotId"
+               style="top:@informationButton[i].PositionY%;
+               left:@informationButton[i].PositionX%;"
+               class="open spot fas fa-eye @informationButton[i].Icon"></i>
+        }
+    }
+    <div class="infomationScreen">
+        <i class="close spot fas fa-times-circle"></i>
+        <div class="infomation-box">
+            <p class="infomation-Title"></p>
+            <p class="infomation-Description"></p>
+        </div>
+    </div>
+}
+<p>
+    <input type="text" id="data" />
+</p>
